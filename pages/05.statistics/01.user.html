@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/libs/bootstrap@5.1.0/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> -->
+  <link href="/assets/css/default.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/css/components.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/css/custom.css" type="text/css" rel="stylesheet" />
+
+  <script src="/assets/libs/font-awesome@5.15.3/js/all.min.js"></script>
+  <script src="/assets/libs/jquery/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <h1>HEADER</h1>
+    </header>
+    <nav class="doc-nav">
+      <div class="doc-nav__inner">
+        <div class="doc-nav__dashboard">
+          <a class="doc-nav__link" href="/index.html">
+            <span class="doc-nav__text">Dashboard</span>
+          </a>
+        </div>
+        <div class="doc-nav__1depth">
+          <button type="button" class="doc-nav__button">
+            <span class="doc-nav__text">사용자 관리</span>
+            <span class="doc-nav__icon"><i class="fas fa-chevron-down" style="width:12px"></i></span>
+          </button>
+          <!-- 활성화 메뉴 addClass - doc-nav__2depth--is-active  추가-->
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/01.manage/01.user.html">
+              <span class="doc-nav__text">사용자 정보관리</span>
+            </a>
+          </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/01.manage/02.manage.html">
+              <span class="doc-nav__text">관리자 정보관리</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="doc-nav__1depth  ">
+          <button type="button" class="doc-nav__button">
+            <span class="doc-nav__text">콩설정 관리</span>
+            <span class="doc-nav__icon"><i class="fas fa-chevron-down" style="width:12px"></i></span>
+          </button>
+          <div class="doc-nav__2depth ">
+            <a class="doc-nav__link" href="/pages/02.kong/01.kongsetting.html">
+              <span class="doc-nav__text">콩 설정 관리</span>
+            </a>
+          </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/02.kong/02.kongcount.html">
+              <span class="doc-nav__text">콩 수량 조정</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="doc-nav__1depth">
+          <button type="button" class="doc-nav__button">
+            <span class="doc-nav__text">상품설정 관리</span>
+            <span class="doc-nav__icon"><i class="fas fa-chevron-down" style="width:12px"></i></span>
+          </button>
+          <div class="doc-nav__2depth ">
+            <a class="doc-nav__link" href="/pages/03.product/01.add.html">
+              <span class="doc-nav__text">상품 등록관리</span>
+            </a>
+          </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/03.product/02.history.html">
+              <span class="doc-nav__text">상품지급내역관리</span>
+            </a>
+          </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/03.product/03.manage.html">
+              <span class="doc-nav__text">상품담당자 관리</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="doc-nav__1depth ">
+          <button type="button" class="doc-nav__button">
+            <span class="doc-nav__text">공지사항 관리</span>
+            <span class="doc-nav__icon"><i class="fas fa-chevron-down" style="width:12px"></i></span>
+          </button>
+          <div class="doc-nav__2depth ">
+            <a class="doc-nav__link" href="/pages/04.notice/01.notice.html">
+              <span class="doc-nav__text">공지사항 관리</span>
+            </a>
+          </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/04.notice/02.popup.html">
+              <span class="doc-nav__text">팝업 관리</span>
+            </a>
+          </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/04.notice/03.push.html">
+              <span class="doc-nav__text">푸시 관리</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="doc-nav__1depth  doc-nav__1depth--is-active">
+          <button type="button" class="doc-nav__button">
+            <span class="doc-nav__text">통계 관리</span>
+            <span class="doc-nav__icon"><i class="fas fa-chevron-down" style="width:12px"></i></span>
+          </button>
+          <div class="doc-nav__2depth doc-nav__2depth--is-active">
+            <a class="doc-nav__link" href="/pages/05.statistics/01.user.html">
+              <span class="doc-nav__text">사용자 통계</span>
+            </a>
+          </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/05.statistics/02.enter.html">
+              <span class="doc-nav__text">접속 통계</span>
+            </a>
+          </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/05.statistics/03.kong.html">
+              <span class="doc-nav__text">전체콩 현황 통계</span>
+            </a>
+          </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/05.statistics/04.rank.html">
+              <span class="doc-nav__text">부점/직급별 통계</span>
+            </a>
+          </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/05.statistics/05.employee.html">
+              <span class="doc-nav__text">직원별 통계</span>
+            </a>
+          </div>
+        </div>
+
+
+
+      </div>
+    </nav>
+    <main class="doc-main">
+      <div class="doc-contents">123123</div>
+    </main>
+
+
+  </div>
+
+
+
+
+
+
+  <!-- <script src="/assets/libs/bootstrap@5.1.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script> -->
+
+
+  <script src="/assets/js/common.js"></script>
+
+
+
+
+
+  <script>
+    $(document).ready(function () {
+      console.log('??')
+
+    })
+  </script>
+
+</body>
+
+</html>
