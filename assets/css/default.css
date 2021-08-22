@@ -1,8 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 /* prettier-ignore */
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../libs/font-awesome@5.15.3/webfonts/fa-brands-400.eot");
+  src: url("../libs/font-awesome@5.15.3/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../libs/font-awesome@5.15.3/webfonts/fa-brands-400.woff2") format("woff2"), url("../libs/font-awesome@5.15.3/webfonts/fa-brands-400.woff") format("woff"), url("../libs/font-awesome@5.15.3/webfonts/fa-brands-400.ttf") format("truetype"), url("../libs/font-awesome@5.15.3/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+
+/* prettier-ignore */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../libs/font-awesome@5.15.3/webfonts/fa-regular-400.eot");
+  src: url("../libs/font-awesome@5.15.3/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../libs/font-awesome@5.15.3/webfonts/fa-regular-400.woff2") format("woff2"), url("../libs/font-awesome@5.15.3/webfonts/fa-regular-400.woff") format("woff"), url("../libs/font-awesome@5.15.3/webfonts/fa-regular-400.ttf") format("truetype"), url("../libs/font-awesome@5.15.3/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
+/* prettier-ignore */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../libs/font-awesome@5.15.3/webfonts/fa-solid-900.eot");
+  src: url("../libs/font-awesome@5.15.3/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../libs/font-awesome@5.15.3/webfonts/fa-solid-900.woff2") format("woff2"), url("../libs/font-awesome@5.15.3/webfonts/fa-solid-900.woff") format("woff"), url("../libs/font-awesome@5.15.3/webfonts/fa-solid-900.ttf") format("truetype"), url("../libs/font-awesome@5.15.3/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
+
+/* prettier-ignore */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, main, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0; padding:0; border:0; word-break: keep-all;}
 main {
   display: block;
+}
+html {
+  font-size: 14px;
+  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "돋움", "Dotum",
+    sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background-color: transparent;
+  color: #333333;
+  font-weight: 400;
+}
+input,
+textarea,
+select,
+button {
+  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "돋움", "Dotum",
+    sans-serif;
 }
 ol,
 ul,
@@ -83,8 +129,33 @@ input[type="email"] {
   box-sizing: border-box;
   width: 100%;
   margin: 0;
-  padding: 0;
-  border: none;
+  padding: 7px 10px;
+  border: 1px solid #999999;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+select {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 7px 10px;
+  border: 1px solid #999999;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+}
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  border: 1px solid #999999;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  resize: vertical;
 }
 
 table {
@@ -102,27 +173,6 @@ th {
   text-align: center;
 }
 td {
-}
-
-html {
-  font-size: 14px;
-  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "돋움", "Dotum",
-    sans-serif;
-  line-height: 1.4;
-  letter-spacing: 0;
-  -webkit-font-smoothing: antialiased;
-}
-body {
-  background-color: transparent;
-  color: #333333;
-  font-weight: 400;
-}
-input,
-textarea,
-select,
-button {
-  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "돋움", "Dotum",
-    sans-serif;
 }
 
 /* LAYOUT */

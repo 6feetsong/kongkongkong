@@ -12,7 +12,21 @@
         $box.toggleClass('doc-nav__1depth--is-active');
 
     })
+  }
 
+ 
+
+
+
+
+  var initFlatpickr = function(){
+    var defaultOption  = {
+      "locale": "ko",
+      "conjunction" : "~",
+      "time_24hr" : true
+    }
+    $('.datepicker').flatpickr(defaultOption);
+    
   }
 
 
@@ -20,7 +34,8 @@
     console.log("document.ready");
 
     initDocNavToggle();
-
+    initFlatpickr();
+   // datepicker()
 
 
 

@@ -1,114 +1,178 @@
 /* 예약어 */
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+.fa,
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
 .hide {
   display: none;
 }
 .hidden {
   font: 0/0 a;
 }
-.clear{}
-.clear:after{
-  content: '';
-  display:block;
+.clear {
+}
+.clear:after {
+  content: "";
+  display: block;
   clear: both;
 }
+
+/* form */
+.form-input {
+  display: inline-block;
+}
+.form-checkbox {
+  display: inline-block;
+}
+.form-radio {
+  display: inline-block;
+}
+.form-select {
+  display: inline-block;
+}
+.form-textarea {
+  display: inline-block;
+}
+.form-textarea > textarea {
+  min-height: 200px;
+}
+.form-textarea__count {
+  display: block;
+  color: #888888;
+  font-size: 12px;
+  line-height: 0.6;
+  text-align: right;
+}
+.form-textarea--is-noresize > textarea {
+  resize: none;
+}
+.form-group {
+}
+
+/* datepicker */
+.form-datepicker {
+  position: relative;
+  display: inline-block;
+}
+.form-datepicker > .datepicker {
+  padding-right: 36px;
+}
+.form-datepicker::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f783";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333333;
+  font-size: 18px;
+  pointer-events: none;
+}
+
 /* table */
-.table{}
-.table table{
+.table {
+}
+.table table {
   table-layout: fixed;
-  width:100%;
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
 .table th,
-.table td{ 
-  padding:10px 15px;
-  border:1px solid #dddddd;
-  color:#333333;
-  font-size:12px;
+.table td {
+  padding: 10px 15px;
+  border: 1px solid #dddddd;
+  color: #333333;
+  font-size: 12px;
   text-align: center;
 }
-.table th{ 
-  font-weight:700;
-  background-color: #F8F8F8;
+.table th {
+  font-weight: 700;
+  background-color: #f8f8f8;
   vertical-align: middle;
 }
-.table td{}
-.table .text-align--left{
-  text-align:left;
+.table td {
 }
-.table .text-align--center{
-  text-align:center;
+.table .text-align--left {
+  text-align: left;
 }
-.table .text-align--right{
-  text-align:right;
+.table .text-align--center {
+  text-align: center;
 }
-.table .vertical-align--top{
+.table .text-align--right {
+  text-align: right;
+}
+.table .vertical-align--top {
   vertical-align: top;
 }
-.table .vertical-align--middle{
+.table .vertical-align--middle {
   vertical-align: middle;
 }
-.table .vertical-align--bottom{
+.table .vertical-align--bottom {
   vertical-align: bottom;
 }
-.table .text-type--ellipsis{
+.table .text-type--ellipsis {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
 }
 
 /*  pagenation */
-.pagenation{
-  margin-top:60px;
+.pagenation {
+  margin-top: 60px;
   text-align: center;
 }
-.pagenation-item{
-  display:inline-block;
-  width:22px;
-  height:22px;
-  border:1px solid #DBDBDB;
+.pagenation-item {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #dbdbdb;
   text-align: center;
-  color:#717071;
-  font-size:12px;
+  color: #717071;
+  font-size: 12px;
   line-height: 22px;
   vertical-align: top;
 }
-.pagenation-item--type-arrow{
-  background-color:#F0F0F0;
+.pagenation-item--type-arrow {
+  background-color: #f0f0f0;
 }
-.pagenation-item--is-active{
-  border-color:#D7191F;
-  color:#D7191F
+.pagenation-item--is-active {
+  border-color: #d7191f;
+  color: #d7191f;
 }
-
 
 /*  breadcrumb */
-.breadcrumb{
-  padding-bottom:30px;
-  color:#333333;
+.breadcrumb {
+  padding-bottom: 30px;
+  color: #333333;
 }
-.breadcrumb__home{
+.breadcrumb__home {
 }
-.breadcrumb__arrow{
-  display:inline-block;
-  margin:0 6px;
+.breadcrumb__arrow {
+  display: inline-block;
+  margin: 0 6px;
 }
-.breadcrumb__link{
+.breadcrumb__link {
 }
-.breadcrumb__link:hover{
+.breadcrumb__link:hover {
   text-decoration: underline;
 }
 
-
 /* page-title */
-.page-title{
-  font-size:18px;
+.page-title {
+  font-size: 18px;
 }
 
-
-.section{
-  padding-top:20px;
+.section {
+  padding-top: 20px;
 }
-.section-title{
-  font-size:16px;
+.section-title {
+  font-size: 16px;
 }

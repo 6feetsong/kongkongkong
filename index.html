@@ -14,6 +14,10 @@
 
   <script src="/assets/libs/font-awesome@5.15.3/js/all.min.js"></script>
   <script src="/assets/libs/jquery/jquery-3.6.0.min.js"></script>
+  <link href="/assets/plugins/flatpickr@4.6.9/css/flatpickr.min.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/plugins/flatpickr@4.6.9/css/themes/material_red.css" type="text/css" rel="stylesheet" />
+  <script src="/assets/plugins/flatpickr@4.6.9/js/flatpickr.js"></script>
+  <script src="/assets/plugins/flatpickr@4.6.9/js/ko.js"></script>
 </head>
 
 <body>
@@ -306,10 +310,10 @@
             <input id="checkbox" type="checkbox">
             <label for="checkbox">체크박스</label>
           </span>
-          <h2>checkbox</h2>
+          <h2>radio</h2>
           <span class="form-radio">
             <input id="radio" type="radio">
-            <label for="radio">체크박스</label>
+            <label for="radio">라디오</label>
           </span>
           <h2>select</h2>
           <span class="form-select">
@@ -322,14 +326,88 @@
           <h2>textarea</h2>
           <div class="form-textarea">
             <textarea></textarea>
-            <span class="textarea-count"></span>
+            <span class="form-textarea__count">300/1000</span>
           </div>
 
+          <div class="form-textarea form-textarea--is-noresize">
+            <textarea>이건 리사자이즈 안됨
+add .form-textarea--is-noresize
+            </textarea>
+            <span class="form-textarea__count">300/1000</span>
+          </div>
+
+
+         
+
+          <h2>form-group(formGrouping 요소)</h2>
+          <div class="form-group">
+            <span class="form-checkbox">
+              <input id="checkbox01" type="checkbox" name="checkboxname01">
+              <label for="checkbox01">체크박스01</label>
+            </span>
+            <span class="form-checkbox">
+              <input id="checkbox02" type="checkbox" name="checkboxname01">
+              <label for="checkbox02">체크박스02</label>
+            </span>
+          </div>
+          <hr />
+          <div class="form-group">
+            <span class="form-radio">
+              <input id="radio01" type="radio"  name="radioname01">
+              <label for="radio01">라디오01</label>
+            </span>
+            <span class="form-radio">
+              <input id="radio02" type="radio" name="radioname01">
+              <label for="radio02">라디오02</label>
+            </span>
+          </div>
         
         </div>
 
 
+        <div id="datepicker" class="guide-box">
+          <h1><a href="#datepicker">datepicker</a></h1>
+         
+          <h2>datepicker(https://flatpickr.js.org/options/)</h2>
+<code> var defaultOption  = {<br />
+  "locale": "ko",<br />
+  "conjunction" : "~",<br />
+  "time_24hr" : true<br />
+          }
+<br />
+$(".datepicker").flatpickr(defaultOption);</code>
 
+<br />
+            <span class="form-datepicker">
+              <input class="datepicker" type="text" />
+            </span>
+            <h3>날짜옵션 추가 버전(js로 추가)</h3>
+            <span class="form-datepicker">
+              <input class="datepicker datepicker1" type="text" />
+             
+            </span>
+
+            <code><br/>
+              $(".datepicker1").flatpickr({<br >
+                enableTime: true,<br >
+                dateFormat: "Y-m-d H:i",<br >
+              })
+        
+            })
+            </code>
+          </div>
+
+
+
+          <div id="buttons" class="guide-box">
+            <h1><a href="#buttons">buttons</a></h1>
+
+            <button type="button">BUTTON01</button>
+            <button type="button">BUTTON02</button>
+            <button type="button">BUTTON03</button>
+            <button type="button">BUTTON04</button>
+            <button type="button">BUTTON05</button>
+          </div>
 
 
 
@@ -354,10 +432,12 @@
 
 
 
-
   <script>
     $(document).ready(function () {
       console.log('??')
+      $(".datepicker1").flatpickr({
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",})
 
     })
   </script>
