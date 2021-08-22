@@ -18,6 +18,9 @@
   <link href="/assets/plugins/flatpickr@4.6.9/css/themes/material_red.css" type="text/css" rel="stylesheet" />
   <script src="/assets/plugins/flatpickr@4.6.9/js/flatpickr.js"></script>
   <script src="/assets/plugins/flatpickr@4.6.9/js/ko.js"></script>
+
+
+  <script src="/assets/js/common.js"></script>
 </head>
 
 <body>
@@ -395,19 +398,119 @@ $(".datepicker").flatpickr(defaultOption);</code>
         
             })
             </code>
-          </div>
 
+            <script>
+              $(document).ready(function () {
+                console.log('??')
+                $(".datepicker1").flatpickr({
+                  enableTime: true,
+                  dateFormat: "Y-m-d H:i",})
+          
+              })
+            </script>
+            <hr />
+
+            <h2>날짜 셋</h2>
+            <h2>날짜 버튼</h2>
+            <div class="daterange">
+              <div class="daterange-option">
+                <span class="daterange-option__radio">
+                  <input id="all" type="radio" name="dateRange" />
+                  <label for="all">전체</label>
+                </span>
+                <span class="daterange-option__radio">
+                  <input id="daterage2023" type="radio" name="dateRange" />
+                  <label for="daterage2023">2023</label>
+                </span>
+                <span class="daterange-option__radio">
+                  <input id="daterage2022" type="radio" name="dateRange" />
+                  <label for="daterage2022">2022</label>
+                </span>
+                <span class="daterange-option__radio">
+                  <input id="daterage2021" type="radio" name="dateRange" />
+                  <label for="daterage2021">2021</label>
+                </span>
+                
+              </div>
+              <span class="form-datepicker">
+                <input class="datepicker" type="text" />
+              </span>
+            </div>
+            <script>
+              $(document).ready( function(){
+                $('.daterange').find('.datepicker').flatpickr({
+                  mode:'range',
+                  onChange: function(selectedDates, dateStr, instance) {
+                     // console.log(selectedDates, dateStr, instance)
+                  },
+                  onClose: function(selectedDates, dateStr, instance){
+                    alert('console.log 확인')
+                    console.log('%c onClose 실행=====','color:red;font-size:30px')
+                    console.log('selectedDates==',selectedDates)
+                    console.log('dateStr==',dateStr)
+                    console.log('instance==',instance)
+                  }
+                })
+              })
+              
+            </script>
+          </div>
 
 
           <div id="buttons" class="guide-box">
             <h1><a href="#buttons">buttons</a></h1>
 
-            <button type="button">BUTTON01</button>
-            <button type="button">BUTTON02</button>
-            <button type="button">BUTTON03</button>
-            <button type="button">BUTTON04</button>
-            <button type="button">BUTTON05</button>
+            <button class="button" type="button">default</button>
+            <button class="button button-type--link" type="button">type link</button>
+            <h2>button flat</h2>
+            <button type="button" class="button button-flat--prmary">flat-prmary</button>
+            <button type="button" class="button button-flat--secondary">flat-secondary</button>
+            <button type="button" class="button button-flat--success">flat-success</button>
+            <button type="button" class="button button-flat--warning">flat-warning</button>
+            <button type="button" class="button button-flat--danger">flat-danger</button>
+            <h2>button outline</h2>
+            <button type="button" class="button button-outline--prmary">outline-prmary</button>
+            <button type="button" class="button button-outline--secondary">outline-secondary</button>
+            <button type="button" class="button button-outline--success">outline-success</button>
+            <button type="button" class="button button-outline--warning">outline-warning</button>
+            <button type="button" class="button button-outline--danger">outline-danger</button>
+
+
+          
           </div>
+
+
+          <div id="button-group" class="guide-box">
+            <h1><a href="#button-group">button-group</a></h1>
+
+            <h2>기본 가운데 정렬</h2>
+            <div class="button-group">
+              <button type="button" class="button button-flat--secondary">flat-secondary</button>
+              <button type="button" class="button button-flat--success">flat-success</button>
+              <button type="button" class="button button-flat--warning">flat-warning</button>
+            </div>
+
+            <h2>3단 Grid</h2>
+            <div class="button-group">
+              <div class="button-group--position-left">
+                
+                <button type="button" class="button button-flat--warning">목록</button>
+                
+              </div>
+              <div class="button-group--position-center">
+                
+                <button type="button" class="button button-flat--danger">혹시나 모를 가운데영역</button>
+              
+              </div>
+              <div class="button-group--position-right">
+                <button type="button" class="button button-flat--secondary">취소</button>
+                <button type="button" class="button button-flat--prmary">확인</button>
+              </div>
+            </div>
+
+
+          </div>
+
 
 
 
@@ -427,20 +530,12 @@ $(".datepicker").flatpickr(defaultOption);</code>
   <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script> -->
 
 
-  <script src="/assets/js/common.js"></script>
 
 
 
 
-  <script>
-    $(document).ready(function () {
-      console.log('??')
-      $(".datepicker1").flatpickr({
-        enableTime: true,
-        dateFormat: "Y-m-d H:i",})
 
-    })
-  </script>
+ 
 <style>
   .guide-box{
     padding:20px 10px;

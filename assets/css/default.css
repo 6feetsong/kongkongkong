@@ -188,6 +188,7 @@ td {
   height: 80px;
   background-color: #d7191f;
   color: #ffffff;
+  z-index: 100;
 }
 .doc-header__inner {
   display: flex;
@@ -263,6 +264,7 @@ td {
   background-color: #334756;
   color: #ffffff;
   overflow-x: hidden;
+  z-index: 100;
 }
 .doc-nav__inner {
 }

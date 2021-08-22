@@ -46,7 +46,7 @@
   display: block;
   color: #888888;
   font-size: 12px;
-  line-height: 0.6;
+  line-height: 1.2;
   text-align: right;
 }
 .form-textarea--is-noresize > textarea {
@@ -74,6 +74,195 @@
   color: #333333;
   font-size: 18px;
   pointer-events: none;
+}
+
+/* dateRange */
+.daterange {
+}
+.daterange-option {
+  padding-bottom: 10px;
+}
+.daterange-option__radio {
+  position: relative;
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: top;
+}
+.daterange-option__radio:first-child {
+  margin-left: 0;
+}
+.daterange-option__radio > input[type="radio"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.daterange-option__radio > input[type="radio"] + label {
+  display: block;
+  box-sizing: border-box;
+  width: 80px;
+  height: 36px;
+  border: 1px solid #999999;
+  background-color: #f2f2f2;
+  color: #717071;
+  font-size: 14px;
+  text-align: center;
+  line-height: 34px;
+  cursor: pointer;
+}
+.daterange-option__radio > input[type="radio"]:checked + label {
+  border: 2px solid #999999;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 32px;
+}
+
+/* button */
+.button {
+  min-width: 80px;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 1px solid #333333;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 14px;
+}
+.button-type--link {
+  text-decoration: underline;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #0d6efd;
+}
+.button-flat--prmary {
+  border-color: #0d6efd;
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+.button-flat--prmary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+.button-flat--secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #ffffff;
+}
+.button-flat--secondary:hover {
+  background-color: #5c636a;
+  border-color: #565e64;
+}
+.button-flat--success {
+  background-color: #198754;
+  border-color: #198754;
+  color: #ffffff;
+}
+.button-flat--success:hover {
+  background-color: #157347;
+  border-color: #146c43;
+}
+.button-flat--warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #333333;
+}
+.button-flat--warning:hover {
+  background-color: #ffca2c;
+  border-color: #ffc720;
+}
+.button-flat--danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #ffffff;
+}
+.button-flat--danger:hover {
+  background-color: #bb2d3b;
+  border-color: #b02a37;
+}
+
+.button-outline--prmary {
+  background-color: transparent;
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+.button-outline--prmary:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #ffffff;
+}
+.button-outline--secondary {
+  background-color: transparent;
+  border-color: #6c757d;
+  color: #6c757d;
+}
+.button-outline--secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #ffffff;
+}
+.button-outline--success {
+  background-color: transparent;
+  border-color: #198754;
+  color: #198754;
+}
+.button-outline--success:hover {
+  background-color: #198754;
+  border-color: #198754;
+  color: #ffffff;
+}
+.button-outline--warning {
+  background-color: transparent;
+  border-color: #ffc107;
+  color: #ffc107;
+}
+.button-outline--warning:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #333333;
+}
+.button-outline--danger {
+  background-color: transparent;
+  border-color: #dc3545;
+  color: #dc3545;
+}
+.button-outline--danger:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #ffffff;
+}
+.button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* button group */
+.button-group {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+}
+.button-group .button {
+  margin: 0 4px;
+}
+.button-group--position-left,
+.button-group--position-center,
+.button-group--position-right {
+  display: table-cell;
+}
+.button-group--position-left {
+  text-align: left;
+}
+.button-group--position-center {
+  text-align: center;
+}
+.button-group--position-right {
+  text-align: right;
 }
 
 /* table */

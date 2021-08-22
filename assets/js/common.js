@@ -21,10 +21,13 @@
 
   var initFlatpickr = function(){
     var defaultOption  = {
-      "locale": "ko",
-      "conjunction" : "~",
-      "time_24hr" : true
+      locale: {
+        rangeSeparator: ' ~ '
+      },
+      conjunction : " ~ ",
+      time_24hr : true
     }
+    flatpickr.localize(flatpickr.l10ns.ko);
     $('.datepicker').flatpickr(defaultOption);
     
   }
