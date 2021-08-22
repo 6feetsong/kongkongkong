@@ -513,6 +513,21 @@ $(".datepicker").flatpickr(defaultOption);</code>
 
 
 
+          <div id="layerPopup" class="guide-box">
+            <h1><a href="#layerPopup">layerPopup</a></h1>
+
+            <button class="button" type="button" data-layer="#testLayer">열기</button>
+            
+            
+
+
+           
+
+          </div>
+
+
+
+
 
 
       </div>
@@ -522,7 +537,36 @@ $(".datepicker").flatpickr(defaultOption);</code>
   </div>
 
 
+  <div class="layer" id="testLayer">
+    <div class="layer-dim"></div>
+    <article class="layer-article">
+      <header class="layer-header">
+        <h1 class="layer-header__title">레이어 타이틀</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div style="height:2000px">
+          어떤 내용이든 들어 가게됩니다요
 
+          </div>
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button-flat--warning" data-layerBtnClose>닫기</button>
+          <button type="button" class="button button-flat--prmary">확인</button>
+        </div>
+
+      </footer>
+    </article>
+
+  </div>
+
+  <script>
+    $(document).ready( function(){
+     // $('#testLayer').leyerOpen()
+    })
+  </script>
 
 
 
