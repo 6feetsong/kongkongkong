@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+@charset "utf-8";
+
+.c-wrap{position:relative;overflow:hidden;min-width:1024px;padding-top:50px}
+.c-wrap h1{display:inline-block;vertical-align:top}
+.c-wrap .c-header{position:fixed;top:0;left:0;right:0;z-index:1000;height:50px;padding:0 20px;background:#222}
+.c-wrap .c-header .c-title{font-weight:normal;font-size:24px;line-height:50px;color:#fff;text-decoration:none}
+.c-wrap .c-header .c-link_sub{margin-left:10px;font-size:14px;line-height:20px;color:#fff}
+.c-wrap .c-header .c-link_sub:hover{text-decoration:underline}
+.c-wrap .c-menu{position:fixed;top:50px;left:0;bottom:0;z-index:1000;overflow:hidden auto;width:215px;border-right:1px solid #e1e1e1;background-color:#fff}
+.c-wrap .c-menu::-webkit-scrollbar{width:8px}
+.c-wrap .c-menu::-webkit-scrollbar-track{background-color:#f8f8f8}
+.c-wrap .c-menu::-webkit-scrollbar-thumb{background-color:#d4d4d4;border-radius:4px}
+.c-wrap .c-menu .c-menu_container{padding:26px 24px 26px 30px}
+.c-wrap .c-menu .c-link_menu{display:block;position:relative;margin-bottom:16px;font-size:15px;line-height:36px;color:#555;text-decoration:none}
+.c-wrap .c-menu .c-link_menu:hover{color:#888}
+.c-wrap .c-menu .c-link_menu.c-active{font-weight:bold;color:#555}
+.c-wrap .c-menu .c-open .c-list_menu{display:block}
+.c-wrap .c-menu .c-link_menu .c-ico_arr{position:absolute;top:13px;right:2px;width:5px;height:5px;border:1px solid #222;border-top:0;border-right:0;transform:rotate(-45deg)}
+.c-wrap .c-menu .c-list_menu{display:none;margin-top:-12px;padding-bottom:20px}
+.c-wrap .c-menu .c-list_menu li{border-left:2px solid #f5f5f5}
+.c-wrap .c-menu .c-link_txt{display:block;position:relative;padding-left:18px;font-size:15px;line-height:36px;color:#222}
+.c-wrap .c-menu .c-link_txt:hover{color:#888;text-decoration:none}
+.c-wrap .c-menu .c-link_txt.c-active{font-weight:bold;color:#222}
+.c-wrap .c-menu .c-link_txt.c-active:before{position:absolute;top:7px;bottom:7px;left:-2px;width:2px;background:#ffcd00;content:''}
+.c-wrap .c-contents{width:768px;margin:0 auto;padding:30px 0 50px 216px}
+.c-wrap .c-box{padding:30px;background:#fff;border:1px solid #ccc;box-sizing:border-box}
+.c-wrap .c-box ~ .c-box{margin-top:40px}
+.c-wrap .c-title_h2{margin-bottom:15px;font-size:30px;color:#222}
+.c-wrap .c-box .c-tit{display:block;font-size:20px;line-height:36px;color:#9607d0}
+.c-wrap .c-box .c-tit ~ .c-tit{margin-top:25px}
+.c-wrap pre{display:none}
+.c-wrap pre code{padding:20px;font-size:14px;font-family:'monaco', sans-serif}
+.c-wrap pre code::-webkit-scrollbar{height:10px}
+.c-wrap pre code::-webkit-scrollbar-track{background-color:#f8f8f8}
+.c-wrap pre code::-webkit-scrollbar-thumb{background-color:#d4d4d4;border-radius:4px}
+.c-btn_codeview{position:relative;width:100%;height:50px;border:1px solid #ccc;border-top:0;font-size:15px;color:#222;background-color:#fbfbfb;text-align:center;outline:0}
+.c-btn_codeview:hover{background-color:#f4f4f4}
+.c-btn_codeview:after{display:inline-block;width:6px;height:6px;margin:4px 0 0 8px;border:2px solid #222;border-top:0;border-right:0;transform:rotate(-45deg);vertical-align:top;content:''}
+.c-btn_codeview.open{border-bottom:0}
+.c-btn_codeview.open:after{margin-top:8px;transform:rotate(135deg)}
+.c-btn_codeview.open + pre{display:block}
+.c-btn_menu{display:none;position:relative;width:30px;height:30px;margin:9px 10px 0 0;vertical-align:top}
+.c-desc{display:block;margin:10px 0;font-weight:600;font-size:16px;color:#9607d0}
+.c-box_tooltip .area_tooltip .desc_tooltip{width:300px}
+.c-wrap .cont-popup{width:1200px}
+.c-wrap .cont-filter{width:1102px}
+.c-wrap .cont-card{width:1024px}
+.c-wrap .cont-header{width:1245px}
+.c-wrap .wrap_profile{display:inline-block;margin:20px 0 0 20px;vertical-align:top}
+.c-wrap .wrap_profile .link_user{display:none}
+.c-wrap .wrap_profile .tooltip_profile{display:block;position:static}
+.c-wrap .doc-header .wrap_profile{margin:0 0 0 16px;vertical-align:middle}
+.c-wrap .doc-header .wrap_profile .link_user{display:inline-block}
+.c-wrap .doc-header .tooltip_profile{display:none;position:absolute}
+.c-wrap .c-list{margin-left:-20px;font-size:0;line-height:0}
+.c-wrap .doc-header{position:static}
+.wrap-color{display:grid;grid-template-columns:1fr 1fr;align-items:start;grid-row-gap:30px}
+.list-color{display:grid;grid-template-columns:100px 1fr}
+.list-color dt{display:flex;align-items:center;font-size:12px;line-height:16px;color:#1A1A1A}
+.list-color dd{display:flex;align-items:center;height:30px}
+.list-color dd div{display:flex;align-items:center;width:130px;height:100%}
+.list-color dd div + div{margin-left:10px}
+
+@media
+only screen and (max-width:768px){
+	.c-wrap{min-width:320px}
+	.c-btn_menu{display:inline-block}
+	.c-btn_menu .c-ico_menu{display:inline-block;width:100%;height:2px;background:#fff;vertical-align:middle}
+	.c-btn_menu .c-ico_menu:before, .c-btn_menu .c-ico_menu:after{position:absolute;top:5px;left:0;width:100%;height:2px;background:#fff;content:''}
+	.c-btn_menu .c-ico_menu:after{top:auto;bottom:3px}
+	.c-wrap.c-menu_open .c-dimmed{position:fixed;top:50px;left:0;right:0;bottom:0;background:#000;opacity:.5;z-index:900;content:''}
+	.c-wrap .c-menu{display:none}
+	.c-wrap.c-menu_open .c-menu{display:block}
+	.c-wrap .c-contents{width:auto;margin:0;padding:16px}
+	.c-wrap .c-box{padding:16px}
+	.c-wrap .c-box .c-tit{font-size:16px}
+	.c-wrap .c-title_h2{font-size:24px;margin-bottom:6px}
+}
+  </style>
+  <style>
+
+/* 조직도 팝업 */
+.wrap_org{display:flex;overflow:hidden;height:600px}
+.wrap_org .group_btn{display:flex;overflow:hidden;width:134px;height:100%;flex-direction:column;justify-content:center;align-items:center;flex:1}
+.wrap_org .group_btn .btn + .btn{margin:8px 0 0}
+.box_org{display:flex;flex-direction:column;overflow:hidden;position:relative;width:390px;height:100%;border:1px solid #E5E5E5;border-radius:4px;box-sizing:border-box}
+.box_org .group_bottom{padding:12px 16px 11px;border-bottom-left-radius:4px;border-bottom-right-radius:4px;font-size:0;line-height:0;background:#FAFAFA;box-sizing:border-box}
+.box_org .group_bottom .btn + .btn{margin-left:4px}
+.box_approveline{position:relative;width:516px;height:100%;padding-top:56px;border:1px solid #E5E5E5;border-radius:4px;box-sizing:border-box}
+.box_org .head_search{padding:12px 16px;background:#FAFAFA}
+.box_org .head_search .search_icon{position:absolute;top:0;right:0;padding:9px 8px 9px 4px;line-height:0;opacity:0.6;pointer-events:none}
+.box_approveline .head_search{position:absolute;top:0;left:0;right:0;padding:11px 16px}
+.tab_approval{display:flex}
+.tab_approval li{flex:1}
+.tab_approval .link_tab{display:block;font-size:15px;line-height:50px;color:#666;background:#F0F0F0;text-align:center;text-decoration:none}
+.tab_approval .link_tab[aria-selected="true"]{font-weight:500;color:#1A1A1A;background-color:#FFF}
+.tab_approval + .head_search{background:#FFF}
+
+/* ---- 조직도 - start ---- */
+.area_orgtree{flex:1;overflow-x:auto;overflow-y:auto;font-size:0;line-height:0;white-space:nowrap}
+.list_orgtree{display:inline-block;min-width:100%;height:100%;padding:8px 0 8px 8px;box-sizing:border-box;vertical-align:top}
+.list_orgtree .item_depth{position:relative;height:32px;padding-left:0px;font-size:0;line-height:0}
+.list_orgtree .item_depth .ico_plus2{overflow:visible;float:left;position:relative;z-index:10;width:16px;height:16px;margin:9px 3px 0 1px;font-size:0;line-height:0;text-indent:-9999px}
+.list_orgtree .tit_item{display:block;position:relative;margin-left:16px;padding:0 16px 0 4px;font-size:13px;color:#1A1A1A;line-height:32px;text-decoration:none}
+.list_orgsub .ico_bg{position:absolute;top:8px;left:0;width:16px;height:16px}
+.list_orgsub .ico_bg:before{position:absolute;top:8px;left:6px;width:6px;height:1px;background:#CCC;content:''} /* 가로 */
+.list_orgsub .ico_bg:after{position:absolute;top:-23px;left:6px;height:32px;width:1px;background:#CCC;content:''} /* 세로 */
+.list_orgsub .item_depth .ico_plus2 ~ .ico_bg:before,
+.list_orgsub .item_depth .ico_plus2 ~ .ico_bg:after,
+.list_orgsub li:first-child > .item_depth .ico_bg:after,
+.list_orgsub .item_include + li > .item_depth .ico_bg:after{content:normal}
+.list_orgtree .item_depth .ico_plus2 ~ .tit_item{padding-left:0}
+.list_orgtree .list_orgsub{display:none;padding-left:16px}
+.list_orgtree .open + .list_orgsub{display:block}
+.list_orgtree .open > .ico_plus2{background-position:-80px -220px}
+.list_orgtree .active:before, .list_orgtree .item_depth:hover:before{position:absolute;top:0;right:0;left:-9000px;bottom:0;background-color:#F2F6FF;content:''}
+.list_orgtree .item_org.active:before, .list_orgtree .item_org:hover:before{content:normal}
+.list_orgtree .active .tit_item, .list_orgtree .item_depth:hover .tit_item{background:#F2F6FF}
+.list_orgtree .item_org.active .tit_item, .list_orgtree .item_org:hover .tit_item{background-color:transparent}
+.list_orgtree .active .tit_item{color:#3377FF}
+.list_orgtree .item_org.active .tit_item{color:#1A1A1A}
+.list_orgtree .item_depth .ico_org{float:left;position:relative;width:16px;height:16px;margin-top:8px}
+.list_orgtree .item_depth .ico_org:before{display:block;width:7px;height:7px;margin:5px 0 0 5px;border-radius:2px;background:#1A1A1A;content:''}
+.list_orgtree .item_move{position:absolute;top:0;left:12px;right:0;bottom:0;padding-left:8px}
+.list_orgtree .ico_move, .list_orgtree .ico_pin{position:absolute;top:50%;right:16px;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);transform:translateY(-50%)}
+.list_orgtree .drag_on .tit_item{color:rgba(26, 26, 26, .4)}
+.list_orgtree .drag_on .active .tit_item{color:rgba(51, 119, 255, .4)}
+.list_orgtree .drag_on .ico_move{opacity:.4}
+.list_orgtree .drag_on .tit_item:after{position:absolute;bottom:0;left:0;right:0;border-bottom:1px solid #B2CCFF;content:''}
+/* ---- 조직도 - end ---- */
+
+.box_approveline .head_search .title_area{height:auto;padding-top:0}
+.box_approveline .head_search .tit_sub{padding-top:7px;font-weight:normal}
+.info_approveline{display:flex;flex-direction:column;height:100%}
+.info_approveline .tit_info{overflow:hidden;padding:0 16px;border-top:1px solid #E5E5E5;font-size:13px;color:#999;line-height:41px;background:#FAFAFA}
+.info_approveline .tit_info .txt_count{color:#1A1A1A}
+.info_approveline .txt_desc{float:right;color:#666}
+.info_approveline .info_empty{height:100%;font-size:13px;line-height:20px;color:#666;text-align:center;box-sizing:border-box}
+.info_approveline .info_empty:before{display:inline-block;width:0;height:100%;vertical-align:middle;content:''}
+.area_approveline{overflow:hidden;padding-bottom:16px;flex:1}
+.area_approveline .list_approveline{height:100%}
+.area_approveline .info_empty{padding-top:16px}
+.list_approveline{overflow-y:auto;padding:0 16px}
+.list_approveline .btn_move{width:35px;height:34px;cursor:pointer}
+.list_approveline li{display:flex;align-items:center;padding:9px 8px 8px;border-bottom:1px solid #E5E5E5;font-size:13px;line-height:34px;color:#999;background:#FFF}
+.list_approveline .emph_txt{flex:1;overflow:hidden;padding:0 16px;font-size:13px;line-height:34px;color:#1A1A1A;white-space:nowrap;text-overflow:ellipsis}
+.list_approveline .btn_icon{border:0}
+.list_approveline .btn_icon:hover{background-color:transparent}
+.list_approveline .item_form + .btn{margin-left:8px}
+.list_approveline .drag_on .txt_wrap .desc_txt,
+.list_approveline .drag_on .txt_approval,
+.list_approveline .drag_on .emph_txt,
+.list_approveline .drag_on .item_form,
+.list_approveline .drag_on .btn,
+.list_approveline .disabled .txt_wrap .desc_txt,
+.list_approveline .disabled .txt_approval,
+.list_approveline .disabled .emph_txt,
+.list_approveline .disabled .item_form,
+.list_approveline .disabled .btn{opacity:.4}
+.list_approveline .drag_on{border-color:#B2CCFF}
+.list_approveline .drag_on, .list_approveline .disabled{position:relative}
+.list_approveline .drag_on:after, .list_approveline .disabled:after{position:absolute;top:0;left:0;right:0;bottom:0;content:''}
+.list_approveline .txt_wrap{display:flex;align-items:center;flex:1;min-width:0;padding:0 8px}
+.list_approveline .txt_wrap:first-child{padding-left:0}
+.list_approveline .txt_wrap .desc_txt{ min-width:0;width:12%;margin:7px 0;font-size:13px;line-height:20px;color:#1A1A1A}
+.list_approveline .txt_wrap .desc_txt2{width:25.33%}
+.list_approveline .txt_wrap .desc_txt + .desc_txt{margin-left:8px}
+.list_approveline .txt_wrap .desc_txt:last-child{width:auto;flex:1}
+.list_approveline .txt_wrap .desc_more{display:inline-flex;max-width:100%;vertical-align:top}
+.list_approveline .txt_wrap .txt_more{flex:none;margin-left:4px;font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;line-height:20px;color:#999}
+.list_approveline .txt_wrap2{padding-right:8px}
+.list_approveline .txt_wrap2 .inner_wrap{display:inline-flex;max-width:100%;align-items:center}
+.list_approveline .txt_wrap2 .desc_wrap{flex:1;flex-basis:auto;min-width:0;margin:7px 0;font-size:13px;line-height:20px;color:#1A1A1A}
+.list_approveline .txt_wrap2 .tag_g{min-width:0;margin-left:8px}
+.list_approveline .item_choice{margin:0 8px 0 24px}
+
+    
+  </style>
+  <style>
+
+/* ---- 조직도 - start ---- */
+.area_orgtree{flex:1;overflow-x:auto;overflow-y:auto;font-size:0;line-height:0;white-space:nowrap}
+.list_orgtree{display:inline-block;min-width:100%;height:100%;padding:8px 0 8px 8px;box-sizing:border-box;vertical-align:top}
+.list_orgtree .item_depth{position:relative;height:32px;padding-left:0px;font-size:0;line-height:0}
+.list_orgtree .item_depth .ico_plus2{overflow:visible;float:left;position:relative;z-index:10;width:16px;height:16px;margin:9px 3px 0 1px;font-size:0;line-height:0;text-indent:-9999px}
+.list_orgtree .tit_item{display:block;position:relative;margin-left:16px;padding:0 16px 0 4px;font-size:13px;color:#1A1A1A;line-height:32px;text-decoration:none}
+.list_orgsub .ico_bg{position:absolute;top:8px;left:0;width:16px;height:16px}
+.list_orgsub .ico_bg:before{position:absolute;top:8px;left:6px;width:6px;height:1px;background:#CCC;content:''} /* 가로 */
+.list_orgsub .ico_bg:after{position:absolute;top:-23px;left:6px;height:32px;width:1px;background:#CCC;content:''} /* 세로 */
+.list_orgsub .item_depth .ico_plus2 ~ .ico_bg:before,
+.list_orgsub .item_depth .ico_plus2 ~ .ico_bg:after,
+.list_orgsub li:first-child > .item_depth .ico_bg:after,
+.list_orgsub .item_include + li > .item_depth .ico_bg:after{content:normal}
+.list_orgtree .item_depth .ico_plus2 ~ .tit_item{padding-left:0}
+.list_orgtree .list_orgsub{display:none;padding-left:16px}
+.list_orgtree .open + .list_orgsub{display:block}
+.list_orgtree .open > .ico_plus2{background-position:-80px -220px}
+.list_orgtree .active:before, .list_orgtree .item_depth:hover:before{position:absolute;top:0;right:0;left:-9000px;bottom:0;background-color:#F2F6FF;content:''}
+.list_orgtree .item_org.active:before, .list_orgtree .item_org:hover:before{content:normal}
+.list_orgtree .active .tit_item, .list_orgtree .item_depth:hover .tit_item{background:#F2F6FF}
+.list_orgtree .item_org.active .tit_item, .list_orgtree .item_org:hover .tit_item{background-color:transparent}
+.list_orgtree .active .tit_item{color:#3377FF}
+.list_orgtree .item_org.active .tit_item{color:#1A1A1A}
+.list_orgtree .item_depth .ico_org{float:left;position:relative;width:16px;height:16px;margin-top:8px}
+.list_orgtree .item_depth .ico_org:before{display:block;width:7px;height:7px;margin:5px 0 0 5px;border-radius:2px;background:#1A1A1A;content:''}
+.list_orgtree .item_move{position:absolute;top:0;left:12px;right:0;bottom:0;padding-left:8px}
+.list_orgtree .ico_move, .list_orgtree .ico_pin{position:absolute;top:50%;right:16px;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);transform:translateY(-50%)}
+.list_orgtree .drag_on .tit_item{color:rgba(26, 26, 26, .4)}
+.list_orgtree .drag_on .active .tit_item{color:rgba(51, 119, 255, .4)}
+.list_orgtree .drag_on .ico_move{opacity:.4}
+.list_orgtree .drag_on .tit_item:after{position:absolute;bottom:0;left:0;right:0;border-bottom:1px solid #B2CCFF;content:''}
+/* ---- 조직도 - end ---- */
+
+.wrap_org{overflow:visible;height:720px}
+.box_org{width:560px;flex-direction:unset}
+.area_orgtree{flex:none;width:257px}
+.list_orgtree .list_orgsub{position:relative}
+.list_orgsub .ico_bg{left:2px}
+.list_orgsub > li{position:relative}
+.list_orgsub > li:before{position:absolute;top:0;bottom:0;left:8px;z-index:1;width:1px;background:#CCC;content:''}
+.list_orgsub > li:first-child:before{top:16px}
+.list_orgsub > li:last-child:before{bottom:auto;height:17px}
+.list_orgsub > li:only-child:before{content:none}
+.list_orgtree .item_depth:hover:before, .list_orgtree .item_depth:hover .tit_item{background-color:#fffcf2}
+.list_orgtree .item_depth.active:hover:before, .list_orgtree .item_depth.active:hover .tit_item, .list_orgtree .active .tit_item, .list_orgtree .active:before{background-color:#fffce5}
+.list_orgtree .active .tit_item{font-weight:500;color:#1A1A1A}
+
+.list_orguser > li + li{width:100%;padding-top:8px}
+.list_orguser .item_profile .cont_thumb{width:172px}
+.list_orguser .item_profile:hover{background:#fffcf2}
+.list_orguser .item_profile:hover .ico_profile:before{background-image:url(/kakaopay-eva-2020/service/images/rtn/frame_yellow5_40.png)}
+.list_orguser .item_profile:hover .tit_thumb.target_tooltip{color:#000}
+.list_orguser .item_profile.select_on, .list_orguser .item_profile.select_on:hover{background:#fffce5}
+.list_orguser .item_profile.select_on .ico_profile:before, .list_orguser .item_profile.select_on:hover .ico_profile:before{background-image:url(/kakaopay-eva-2020/service/images/rtn/frame_yellow10_40.png)}
+.area_orguser .info_empty{height:240px;border:1px solid #F0F0F0;border-radius:4px;text-align:center}
+.area_orguser .info_empty:before{display:inline-block;width:0;height:100%;vertical-align:middle;content:''}
+.area_orguser .info_empty .txt_empty{display:inline-block;font-size:13px;line-height:20px;color:#4C4C4C;vertical-align:middle}
+.area_orguser .info_empty .ico_comm{display:block;margin:0 auto 8px}
+
+.wrap_org .area_orguser{display:flex;width:300px;height:100%;border-left:1px solid #F0F0F0;flex-direction:column;flex:1}
+.wrap_org .list_orguser{overflow-x:hidden;overflow-y:auto;height:100%;padding:8px 16px 16px;background:#F7F7F7;box-sizing:border-box}
+.wrap_org .list_orguser > li:first-child{padding-top:8px}
+.wrap_org .list_orguser .item_profile .area_tooltip .desc_tooltip{left:0;width:160px}
+.wrap_org .list_orguser > li:nth-child(7) ~ li:last-child .item_profile .area_tooltip .desc_tooltip{top:auto;bottom:100%}
+.wrap_org .area_orguser .info_empty{display:block;height:100%;border:0 none}
+.area_orguser .item_choice{padding:8px 16px 0;background:#F7F7F7;box-sizing:border-box}
+.area_orguser .item_choice + .list_orguser{padding-top:0}
+.wrap_org .group_btn{width:104px;flex:none;justify-content:space-around}
+.wrap_org .group_btn .btn + .btn{margin-top:12px}
+.wrap_approveline{flex:1}
+.box_approveline{display:flex;width:auto;height:352px;padding-top:0;flex-direction:column}
+.box_approveline + .box_approveline{margin-top:16px}
+.box_approveline .head_search{position:static}
+.info_approveline{overflow:hidden;flex:1}
+.info_approveline .tit_info{border-top:0 none}
+.area_approveline{padding-bottom:0}
+.list_approveline{padding:0}
+.list_approveline li{padding-left:16px}
+.list_approveline li:hover{background:#fffcf2}
+.list_approveline li:nth-child(5) ~ li:last-child{border-bottom:0 none}
+.list_approveline .select_on, .list_approveline .select_on:hover{background:#fffce5}
+.list_approveline .drag_on{border-color:#ffdd00}
+.list_approveline .txt_approval{width:41px}
+.list_approveline .emph_txt{padding:0 8px;line-height:20px;white-space:unset}
+.list_approveline .btn_icon{background:transparent}
+.list_approveline .btn_move{margin-left:4px}
+.list_approveline .align_center{text-align:center}
+.area_approveline .info_chip{overflow-y:auto;height:100%;padding:16px;box-sizing:border-box}
+.area_approveline .info_empty{padding-top:0}
+.area_approveline .info_empty .txt_empty{display:inline-block;vertical-align:middle}
+.area_approveline .info_empty .txt_empty .ico_comm{display:block;margin:0 auto 8px}
+
+.wrap_org .box_org:only-child{width:100%}
+.box_org:only-child .list_orguser{padding-left:8px}
+.box_org:only-child .list_orguser .item_profile{width:100%}
+.box_org:only-child .list_orguser .cont_thumb{width:180px}
+.box_org:only-child .list_orguser > li{padding:8px 0 0 8px;box-sizing:border-box}
+.box_org .type_column > li{float:left;width:50%}
+  </style>
+</head>
+<body>
+  <div class="wrap_org">
+		<div class="box_org">
+			<!-- 조직도 트리 -->
+			<div class="area_orgtree">
+	<ul class="list_orgtree">
+		<li>
+			<div class="item_depth item_org open">
+				<div class="ico_org"></div>
+				<div class="tit_item">카카오페이</div>
+			</div>
+			<ul class="list_orgsub">
+				<li class="item_include">
+					<div class="item_depth open">
+						<button type="button" class="ico_comm ico_plus2">열기 / 접기</button>
+						<span class="ico_bg"></span>
+						<a href="#none" class="tit_item">상위부서명</a>
+					</div>
+					<ul class="list_orgsub">
+						<li>
+							<div class="item_depth">
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">하위부서명</a>
+							</div>
+						</li>
+						<li>
+							<div class="item_depth">
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">하위부서명</a>
+							</div>
+						</li>
+						<li>
+							<div class="item_depth">
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">하위부서명</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="item_include">
+					<div class="item_depth">
+						<button type="button" class="ico_comm ico_plus2">열기 / 접기</button>
+						<span class="ico_bg"></span>
+						<a href="#none" class="tit_item">상위부서명</a>
+					</div>
+					<ul class="list_orgsub">
+						<li>
+							<div class="item_depth">
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">하위부서명</a>
+							</div>
+						</li>
+						<li>
+							<div class="item_depth">
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">하위부서명</a>
+							</div>
+						</li>
+						<li class="item_include">
+							<div class="item_depth open">
+								<button type="button" class="ico_comm ico_plus2">열기 / 접기</button>
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">상위부서명</a>
+							</div>
+							<ul class="list_orgsub">
+																<li>
+									<div class="item_depth">
+										<span class="ico_bg"></span>
+										<a href="#none" class="tit_item">하위부서명</a>
+									</div>
+								</li>
+																<li>
+									<div class="item_depth">
+										<span class="ico_bg"></span>
+										<a href="#none" class="tit_item">하위부서명</a>
+									</div>
+								</li>
+															</ul>
+						</li>
+												<li>
+							<div class="item_depth">
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">하위부서명</a>
+							</div>
+						</li>
+												<li>
+							<div class="item_depth">
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">하위부서명</a>
+							</div>
+						</li>
+											</ul>
+				</li>
+				<li class="item_include">
+					<div class="item_depth">
+						<button type="button" class="ico_comm ico_plus2">열기 / 접기</button>
+						<span class="ico_bg"></span>
+						<a href="#none" class="tit_item">상위부서명</a>
+					</div>
+					<ul class="list_orgsub">
+						<li class="item_include">
+							<div class="item_depth open">
+								<button type="button" class="ico_comm ico_plus2">열기 / 접기</button>
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">상위부서명</a>
+							</div>
+							<ul class="list_orgsub">
+								<li>
+									<div class="item_depth">
+										<span class="ico_bg"></span>
+										<a href="#none" class="tit_item">하위부서명</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="item_depth">
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">하위부서명</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+								<li class="item_include">
+					<div class="item_depth">
+						<button type="button" class="ico_comm ico_plus2">열기 / 접기</button>
+						<span class="ico_bg"></span>
+						<a href="#none" class="tit_item">상위부서명</a>
+					</div>
+					<ul class="list_orgsub">
+						<li>
+							<div class="item_depth">
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">하위부서명</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+								<li class="item_include">
+					<div class="item_depth">
+						<button type="button" class="ico_comm ico_plus2">열기 / 접기</button>
+						<span class="ico_bg"></span>
+						<a href="#none" class="tit_item">상위부서명</a>
+					</div>
+					<ul class="list_orgsub">
+						<li>
+							<div class="item_depth">
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">하위부서명</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+								<li class="item_include">
+					<div class="item_depth">
+						<button type="button" class="ico_comm ico_plus2">열기 / 접기</button>
+						<span class="ico_bg"></span>
+						<a href="#none" class="tit_item">상위부서명</a>
+					</div>
+					<ul class="list_orgsub">
+						<li>
+							<div class="item_depth">
+								<span class="ico_bg"></span>
+								<a href="#none" class="tit_item">하위부서명</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+							</ul>
+		</li>
+
+	</ul>
+</div>
+			<!-- // 조직도 트리 -->
+			<div class="area_orguser">
+				<div class="info_empty">
+					<span class="txt_empty">
+						<span class="ico_comm ico_info2"></span>평가 그룹을 먼저 선택해주세요.
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="group_btn">
+			<button type="button" class="btn btn_small btn_gray">적용</button>
+			<button type="button" class="btn btn_small btn_gray">적용</button>
+		</div>
+		<div class="wrap_approveline">
+			<div class="box_approveline">
+				<div class="info_approveline">
+					<div class="tit_info">평가자 설정</div>
+					<div class="area_approveline">
+						<div class="info_empty">
+							<span class="txt_empty">
+								<span class="ico_comm ico_info2"></span>선택된 평가자가 없습니다.
+							</span>
+						</div>
+					</div>
+					<!-- // area_approveline -->
+				</div>
+				<!-- // info_approveline -->
+			</div>
+			<!-- // box_approveline -->
+			<div class="box_approveline">
+				<div class="head_search">
+					<div class="title_area"><!-- 최상단형은 type_top 클래스, 스몰 타입형은 type_small 클래스 추가 -->
+						<div class="wrap_form_area">
+							<div class="type_search"><!-- 검색 타입 type_search -->
+								<div class="item_form form_xmedium">
+									<div class="opt_comm opt_search">
+										<!-- 서제스트 열릴 경우 opt_open 클래스 추가 -->
+										<div class="box_tf">
+											<input type="text" class="tf_comm" placeholder="이름 또는 아이디 입력">
+											<button type="button" class="btn_g btn_del"><span class="ico_comm ico_del">삭제</span></button>
+											<div class="btn_g search_icon"><span class="ico_comm ico_search">검색</span></div>
+										</div>
+										<div class="box_opt">
+											<ul class="list_opt">
+																								<li>
+													<a href="#none" class="link_opt">kate.hong(홍다정)</a>
+												</li>
+																								<li class="on">
+													<a href="#none" class="link_opt">kate.hong(홍다정)</a>
+												</li>
+																								<li>
+													<a href="#none" class="link_opt">kate.hong(홍다정)</a>
+												</li>
+																								<li>
+													<a href="#none" class="link_opt">kate.hong(홍다정)</a>
+												</li>
+																								<li>
+													<a href="#none" class="link_opt">kate.hong(홍다정)</a>
+												</li>
+																								<li>
+													<a href="#none" class="link_opt">kate.hong(홍다정)</a>
+												</li>
+																								<li>
+													<a href="#none" class="link_opt">kate.hong(홍다정)</a>
+												</li>
+																								<li>
+													<a href="#none" class="link_opt">kate.hong(홍다정)</a>
+												</li>
+																								<li>
+													<a href="#none" class="link_opt">kate.hong(홍다정)</a>
+												</li>
+																								<li>
+													<a href="#none" class="link_opt">kate.hong(홍다정)</a>
+												</li>
+																							</ul>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn_medium btn_secondary">추가</button>
+							</div>
+						</div>
+						<div class="wrap_tit">
+							<strong class="tit_sub">크루 조회</strong>
+						</div>
+					</div>
+				</div>
+				<!-- // head_search -->
+
+				<div class="info_approveline">
+					<div class="tit_info">평가 대상자 설정</div>
+					<div class="area_approveline">
+						<div class="info_empty">
+							<span class="txt_empty">
+								<span class="ico_comm ico_info2"></span>선택된 평가자가 없습니다.
+							</span>
+						</div>
+					</div>
+					<!-- // area_approveline -->
+				</div>
+				<!-- // info_approveline -->
+			</div>
+			<!-- // box_approveline -->
+		</div>
+		<!-- // wrap_approveline -->
+	</div>
+</body>
+</html>
