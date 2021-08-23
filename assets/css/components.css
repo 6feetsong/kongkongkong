@@ -132,54 +132,54 @@
   color: #ffffff;
   font-size: 14px;
 }
-.button-type--link {
+.button--type-link {
   text-decoration: underline;
   background-color: transparent;
   border: 1px solid transparent;
   color: #0d6efd;
 }
-.button-flat--prmary {
+.button--flat-prmary {
   border-color: #0d6efd;
   background-color: #0d6efd;
   color: #ffffff;
 }
-.button-flat--prmary:hover {
+.button--flat-prmary:hover {
   background-color: #0b5ed7;
   border-color: #0a58ca;
 }
-.button-flat--secondary {
+.button--flat-secondary {
   background-color: #6c757d;
   border-color: #6c757d;
   color: #ffffff;
 }
-.button-flat--secondary:hover {
+.button--flat-secondary:hover {
   background-color: #5c636a;
   border-color: #565e64;
 }
-.button-flat--success {
+.button--flat-success {
   background-color: #198754;
   border-color: #198754;
   color: #ffffff;
 }
-.button-flat--success:hover {
+.button--flat-success:hover {
   background-color: #157347;
   border-color: #146c43;
 }
-.button-flat--warning {
+.button--flat-warning {
   background-color: #ffc107;
   border-color: #ffc107;
   color: #333333;
 }
-.button-flat--warning:hover {
+.button--flat-warning:hover {
   background-color: #ffca2c;
   border-color: #ffc720;
 }
-.button-flat--danger {
+.button--flat-danger {
   background-color: #dc3545;
   border-color: #dc3545;
   color: #ffffff;
 }
-.button-flat--danger:hover {
+.button--flat-danger:hover {
   background-color: #bb2d3b;
   border-color: #b02a37;
 }
@@ -289,25 +289,25 @@
 }
 .table td {
 }
-.table .text-align--left {
+.table .text--align-left {
   text-align: left;
 }
-.table .text-align--center {
+.table .text--align-center {
   text-align: center;
 }
-.table .text-align--right {
+.table .text--align-right {
   text-align: right;
 }
-.table .vertical-align--top {
+.table .vertical--align-top {
   vertical-align: top;
 }
-.table .vertical-align--middle {
+.table .vertical--align-middle {
   vertical-align: middle;
 }
-.table .vertical-align--bottom {
+.table .vertical--align-bottom {
   vertical-align: bottom;
 }
-.table .text-type--ellipsis {
+.table .text--type-ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -411,6 +411,8 @@
 }
 
 /* page-title */
+.page-article {
+}
 .page-title {
   font-size: 18px;
 }
