@@ -250,20 +250,180 @@
           <section class="page-section">
             <h3 class="page-section__title">콩 내역</h3>
 
-            <div class="tabs">
-              <div class="tabs-item">
-                <a class="tabs-item__button" href="#">TAB01</a>
+            <div class="tab-grid">
+              <div class="tab-grid__item tab-grid__item--is-active">
+                <a class="tab-grid__button" href="#">알콩(주는 콩)/ 쓴콩(준 콩) 내역
+                </a>
               </div>
-              <div class="tabs-item">
-                <a class="tabs-item__button" href="#">TAB02</a>
+              <div class="tab-grid__item">
+                <a class="tab-grid__button" href="#">달콩(받은 콩) 내역
+                </a>
               </div>
-              <div class="tabs-item">
-                <a class="tabs-item__button" href="#">TAB03</a>
+              <div class="tab-grid__item">
+                <a class="tab-grid__button" href="#">황금콩 내역
+                </a>
               </div>
-              <div class="tabs-item">
-                <a class="tabs-item__button" href="#">TAB04</a>
+              <div class="tab-grid__item">
+                <a class="tab-grid__button" href="#">선물 전환 내역
+                </a>
               </div>
             </div>
+
+            <div class="filter-wrap">
+
+              <div class="filter-row">
+                <div class="filter-cell__title">주는 콩 권한여부</div>
+                <div class="filter-cell__contents">
+                  <span class="form-select">
+                    <select>
+                      <option value="Y">Y</option>
+                      <option value="N">N</option>
+                    </select>
+                  </span>
+                </div>
+                
+              </div>
+
+              <div class="filter-row">
+                <div class="filter-cell__title">총 개수</div>
+                <div class="filter-cell__text">999,999,999개</div>
+                
+                <div class="filter-cell__title" style="width:80px">사용가능 개수</div>
+                <div class="filter-cell__text">999,999,999개</div>
+
+                <div class="filter-cell__title" style="width:80px">사용 개수</div>
+                <div class="filter-cell__text">999,999,999개</div>
+
+                <div class="filter-cell__title" style="width:80px">기간만료 개수</div>
+                <div class="filter-cell__text">999,999,999개</div>
+               
+              
+              </div>
+              <div class="filter-row">
+                <div class="filter-cell__title">조회기간</div>
+                <div class="filter-cell__contents">
+                  <div class="form-group">
+                    <div class="daterange">
+                      <div class="daterange-option">
+                        <span class="daterange-option__radio">
+                          <input id="all" type="radio" name="dateRange">
+                          <label for="all">전체</label>
+                        </span>
+                        <span class="daterange-option__radio">
+                          <input id="daterage2023" type="radio" name="dateRange">
+                          <label for="daterage2023">2023</label>
+                        </span>
+                        <span class="daterange-option__radio">
+                          <input id="daterage2022" type="radio" name="dateRange">
+                          <label for="daterage2022">2022</label>
+                        </span>
+                        <span class="daterange-option__radio">
+                          <input id="daterage2021" type="radio" name="dateRange">
+                          <label for="daterage2021">2021</label>
+                        </span>
+                        
+                      </div>
+                      <span class="form-datepicker">
+                        <input class="datepicker flatpickr-input" type="text" readonly="readonly">
+                      </span>
+                      <button type="button" class="button button--flat-warning">검색</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </section>
+
+
+          <section class="page-section">
+            <div class="table">
+              <table>
+                <caption></caption>
+                <colgroup>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">테이블 헤드01</th>
+                    <th scope="col">테이블 헤드01</th>
+                    <th scope="col">테이블 헤드01</th>
+                    <th scope="col">테이블 헤드01</th>
+                    <th scope="col">테이블 헤드01</th>
+                    <th scope="col">테이블 헤드01</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                  </tr>
+                  <tr>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                  </tr>
+                  <tr>
+                    <td>테이블 내용</td>
+                    <td class="text--type-ellipsis">테이블 내용에 말줄임을 하고 싶을때는 어떻게 할까</td>
+                    <td>text--type-ellipsis class를 넣자</td>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                  </tr>
+                  <tr>
+                    <td class="text--align-left">text--align-left</td>
+                    <td class="text--align-center">text--align-center</td>
+                    <td class="text--align-right">text--align-right</td>
+                    <td>기본값 cneter</td>
+                    <td>테이블 내용</td>
+                    <td>테이블 내용</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">vertical-align<br><br><br><br></th>
+                    <td class="vertical--align-top">vertical--align-top</td>
+                    <td class="vertical--align-middle">vertical--align-middle</td>
+                    <td class="vertical--align-bottom">vertical--align-bottom</td>
+                    <td>기본값 middle</td>
+                    <td>테이블 내용</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pagenation">
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-double-left"></i></a>
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-left"></i></a>
+  
+  
+              <a class="pagenation-item pagenation-item--is-active" href="#">1</a>
+              <a class="pagenation-item" href="#">2</a>
+              <a class="pagenation-item" href="#">3</a>
+              <a class="pagenation-item" href="#">4</a>
+              <a class="pagenation-item" href="#">5</a>
+              <a class="pagenation-item" href="#">6</a>
+              <a class="pagenation-item" href="#">7</a>
+              <a class="pagenation-item" href="#">8</a>
+              <a class="pagenation-item" href="#">9</a>
+              <a class="pagenation-item" href="#">10</a>
+  
+  
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-right"></i></a>
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-double-right"></i></a>
+            </div>
+
           </section>
 
 
