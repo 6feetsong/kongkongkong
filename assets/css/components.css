@@ -22,6 +22,12 @@
   display: block;
   clear: both;
 }
+.required {
+  color: #ff0000;
+}
+
+/* color */
+/* 예약 color 정의 해야됨 */
 
 /* form */
 .form-input {
@@ -53,6 +59,24 @@
   resize: none;
 }
 .form-group {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+}
+.form-group > [class^="form"] {
+  margin-left: 10px;
+}
+.form-group > [class^="form"]:first-child {
+  margin-left: 0;
+}
+.form-group > [class^="form"]:only-child {
+  width: 100%;
+}
+.form-group .button {
+  height: 36px;
+}
+.form-group > .form-input + .button {
+  margin-left: 10px;
 }
 
 /* datepicker */
@@ -184,52 +208,52 @@
   border-color: #b02a37;
 }
 
-.button-outline--prmary {
+.button--outline-prmary {
   background-color: transparent;
   border-color: #0d6efd;
   color: #0d6efd;
 }
-.button-outline--prmary:hover {
+.button--outline-prmary:hover {
   background-color: #0d6efd;
   border-color: #0d6efd;
   color: #ffffff;
 }
-.button-outline--secondary {
+.button--outline-secondary {
   background-color: transparent;
   border-color: #6c757d;
   color: #6c757d;
 }
-.button-outline--secondary:hover {
+.button--outline-secondary:hover {
   background-color: #6c757d;
   border-color: #6c757d;
   color: #ffffff;
 }
-.button-outline--success {
+.button--outline-success {
   background-color: transparent;
   border-color: #198754;
   color: #198754;
 }
-.button-outline--success:hover {
+.button--outline-success:hover {
   background-color: #198754;
   border-color: #198754;
   color: #ffffff;
 }
-.button-outline--warning {
+.button--outline-warning {
   background-color: transparent;
   border-color: #ffc107;
   color: #ffc107;
 }
-.button-outline--warning:hover {
+.button--outline-warning:hover {
   background-color: #ffc107;
   border-color: #ffc107;
   color: #333333;
 }
-.button-outline--danger {
+.button--outline-danger {
   background-color: transparent;
   border-color: #dc3545;
   color: #dc3545;
 }
-.button-outline--danger:hover {
+.button--outline-danger:hover {
   background-color: #dc3545;
   border-color: #dc3545;
   color: #ffffff;
@@ -263,6 +287,45 @@
 }
 .button-group--position-right {
   text-align: right;
+}
+
+/* filter */
+.filter-wrap {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.filter-row {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.filter-row + .filter-row {
+  margin-top: -1px;
+}
+.filter-cell {
+  display: table-cell;
+}
+
+.filter-cell__title,
+.filter-cell__contents {
+  padding: 5px 20px;
+  border: 1px solid #dddddd;
+}
+.filter-cell__title {
+  width: 160px;
+  display: table-cell;
+  background-color: #eeeeee;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+.filter-cell__contents {
+  display: table-cell;
 }
 
 /* table */
@@ -416,10 +479,12 @@
 .page-title {
   font-size: 18px;
 }
-
-.section {
+.button-group + .page-section {
+  padding-top: 0px;
+}
+.page-section {
   padding-top: 20px;
 }
-.section-title {
+.page-section__title {
   font-size: 16px;
 }

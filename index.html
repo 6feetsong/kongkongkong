@@ -200,6 +200,77 @@
         </div>
 
 
+        <div id="filter" class="guide-box">
+          <h1><a href="#filter">filter</a></h1>
+
+          <div class="filter-wrap">
+            <div class="filter-row">
+              <div class="filter-cell__title">이름<sup class="required">*</sup></div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-input">
+                    <input type="text" >
+                  </span>
+                </div>
+              </div>
+            
+              <div class="filter-cell__title">내용<sup class="required">*</sup></div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-select">
+                    <select>
+                      <option value="option01">option01</option>
+                      <option value="option02">option02</option>
+                      <option value="option03">option03</option>
+                    </select>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-row">
+              <div class="filter-cell__title">옵션1</div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-checkbox">
+                    <input id="checkbox01-1" type="checkbox" name="checkboxname01-1">
+                    <label for="checkbox01-1">체크박스01</label>
+                  </span>
+                  <span class="form-checkbox">
+                    <input id="checkbox02-1" type="checkbox" name="checkboxname01-1">
+                    <label for="checkbox02-1">체크박스02</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-row">
+              <div class="filter-cell__title" style="width:400px">혹시나 width 변경시</div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-checkbox">
+                    <input id="checkbox01-1" type="checkbox" name="checkboxname01-1">
+                    <label for="checkbox01-1">체크박스01</label>
+                  </span>
+                  <span class="form-checkbox">
+                    <input id="checkbox02-1" type="checkbox" name="checkboxname01-1">
+                    <label for="checkbox02-1">체크박스02</label>
+                  </span>
+                </div>
+              </div>
+              <div class="filter-cell__title">혹시나 width 변경시</div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-input">
+                    <input type="text" >
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
 
         <div id="table" class="guide-box">
           <h1><a href="#table">table</a></h1>
@@ -305,23 +376,52 @@
 
           <h2>input</h2>
           <span class="form-input">
-            <input type="text">
+            <input type="text" placeholder="placeholder">
+          </span>
+          <span class="form-input">
+            <input type="text" placeholder="placeholder" value="readonly" readonly>
+          </span>
+          <span class="form-input">
+            <input type="text" placeholder="placeholder" value="disabled" disabled>
           </span>
 
           <h2>checkbox</h2>
           <span class="form-checkbox">
-            <input id="checkbox" type="checkbox">
-            <label for="checkbox">체크박스</label>
+            <input id="checkboxNormal" type="checkbox">
+            <label for="checkboxNormal">noraml</label>
+          </span>
+          <span class="form-checkbox">
+            <input id="checkboxChecked" type="checkbox" checked>
+            <label for="checkboxChecked">checked</label>
+          </span>
+          <span class="form-checkbox">
+            <input id="checkboxDisbled" type="checkbox" disabled>
+            <label for="checkboxDisbled">disabled</label>
           </span>
           <h2>radio</h2>
           <span class="form-radio">
-            <input id="radio" type="radio">
-            <label for="radio">라디오</label>
+            <input id="radioNormal" type="radio" name="guideRadio">
+            <label for="radioNormal">normal</label>
+          </span>
+          <span class="form-radio">
+            <input id="radioChecked" type="radio" name="guideRadio" checked>
+            <label for="radioChecked">checked</label>
+          </span>
+          <span class="form-radio">
+            <input id="radioDisabled" type="radio" name="guideRadio" disabled>
+            <label for="radioDisabled">disabled</label>
           </span>
           <h2>select</h2>
           <span class="form-select">
             <select>
               <option value="option01">option01</option>
+              <option value="option02">option02</option>
+              <option value="option03">option03</option>
+            </select>
+          </span>
+          <span class="form-select">
+            <select disabled>
+              <option value="option01">disabled</option>
               <option value="option02">option02</option>
               <option value="option03">option03</option>
             </select>
@@ -336,6 +436,11 @@
             <textarea>이건 리사자이즈 안됨
 add .form-textarea--is-noresize
             </textarea>
+            <span class="form-textarea__count">300/1000</span>
+          </div>
+
+          <div class="form-textarea">
+            <textarea disabled></textarea>
             <span class="form-textarea__count">300/1000</span>
           </div>
 
@@ -469,11 +574,11 @@ $(".datepicker").flatpickr(defaultOption);</code>
             <button type="button" class="button button--flat-warning">flat-warning</button>
             <button type="button" class="button button--flat-danger">flat-danger</button>
             <h2>button outline</h2>
-            <button type="button" class="button button-outline--prmary">outline-prmary</button>
-            <button type="button" class="button button-outline--secondary">outline-secondary</button>
-            <button type="button" class="button button-outline--success">outline-success</button>
-            <button type="button" class="button button-outline--warning">outline-warning</button>
-            <button type="button" class="button button-outline--danger">outline-danger</button>
+            <button type="button" class="button button--outline-prmary">outline-prmary</button>
+            <button type="button" class="button button--outline-secondary">outline-secondary</button>
+            <button type="button" class="button button--outline-success">outline-success</button>
+            <button type="button" class="button button--outline-warning">outline-warning</button>
+            <button type="button" class="button button--outline-danger">outline-danger</button>
 
 
           
@@ -509,6 +614,26 @@ $(".datepicker").flatpickr(defaultOption);</code>
             </div>
 
 
+          </div>
+
+
+
+          <div id="tabs" class="guide-box">
+            <h1><a href="#tabs">tabs</a></h1>
+            <div class="tabs">
+              <div class="tabs-item">
+                <a class="tabs-item__button" href="#">TAB01</a>
+              </div>
+              <div class="tabs-item">
+                <a class="tabs-item__button" href="#">TAB02</a>
+              </div>
+              <div class="tabs-item">
+                <a class="tabs-item__button" href="#">TAB03</a>
+              </div>
+              <div class="tabs-item">
+                <a class="tabs-item__button" href="#">TAB04</a>
+              </div>
+            </div>
           </div>
 
 

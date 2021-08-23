@@ -157,6 +157,12 @@ textarea {
   font-weight: 400;
   resize: vertical;
 }
+input:disabled,
+input:disabled + label,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+}
 
 table {
   border-spacing: 0;
@@ -350,7 +356,12 @@ td {
   padding-left: 250px;
 }
 .doc-contents {
-  padding: 20px;
+  padding: 30px;
 }
 /* //MAIN */
 /* //layout*/
+
+body {
+  min-width: 1280px;
+  margin: 0 auto;
+}

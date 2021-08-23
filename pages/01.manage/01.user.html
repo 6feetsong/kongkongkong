@@ -19,7 +19,18 @@
 <body>
   <div class="doc-wrap">
     <header class="doc-header">
-      <h1>HEADER</h1>
+      <div class="doc-header__inner">
+        <h1 class="doc-header__logo"><a class="doc-header__logo-link" href="#">알콩달콩</a></h1>
+        <div class="doc-header__title">경남은행 콩시스템 관리자</div>
+        <aside class="doc-header__aside">
+          <div class="doc-header__user">
+            <strong class="doc-header__user-name">홍길동(활빈당지부)</strong>
+          </div>
+          <div class="doc-header__logout">
+            <a href="#"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
+          </div>
+        </aside>
+      </div>
     </header>
     <nav class="doc-nav">
       <div class="doc-nav__inner">
@@ -144,7 +155,120 @@
       </div>
     </nav>
     <main class="doc-main">
-      <div class="doc-contents">123123</div>
+      <div class="doc-contents">
+        <article class="page-article">
+          <nav class="breadcrumb">
+            <a class="breadcrumb__home" href="#"><i style="width:18px" class="fas fa-home"></i></a>
+
+            <span class="breadcrumb__arrow"><i class="fas fa-chevron-right"></i></span>
+            <a href="" class="breadcrumb__link">사용자관리</a>
+
+            <span class="breadcrumb__arrow"><i class="fas fa-chevron-right"></i></span>
+            <a href="" class="breadcrumb__link">사용자정보 관리</a>
+          </nav>
+          <h2 class="page-title">사용자정보 관리</h2>
+          <div class="button-group">
+            <div class="button-group--position-right">
+              <button type="button" class="button button--outline-secondary">액셀다운로드</button>
+            </div>
+          </div>
+
+          <section class="page-section">
+            <div class="filter-wrap">
+
+              <div class="filter-row">
+                <div class="filter-cell__title">행번<sup class="required">*</sup></div>
+                <div class="filter-cell__contents">
+                  <div class="form-group">
+                    <span class="form-input">
+                      <input type="text" >
+                    </span>
+                    <button type="button" class="button button--flat-warning">행번변경</button>
+                  </div>
+                </div>
+                
+              </div>
+
+              <div class="filter-row">
+                <div class="filter-cell__title">이름</div>
+                <div class="filter-cell__contents">
+                  <div class="form-group">
+                    <span class="form-input">
+                      <input type="text" placeholder="이름" readonly>
+                    </span>
+                  </div>
+                </div>
+                
+                <div class="filter-cell__title">휴대전화번호</div>
+                <div class="filter-cell__contents">
+                  <div class="form-group">
+                    <span class="form-input">
+                      <input type="text" >
+                    </span>
+                    <span class="form-separator">-</span>
+                    <span class="form-input">
+                      <input type="text" >
+                    </span>
+                    <span class="form-separator">-</span>
+                    <span class="form-input">
+                      <input type="text" >
+                    </span>
+                  </div>
+                </div>
+               
+              
+              </div>
+              <div class="filter-row">
+                <div class="filter-cell__title">직위<sup class="required">*</sup></div>
+                <div class="filter-cell__contents">
+                  <div class="form-group">
+                    <span class="form-input">
+                      <input type="text" >
+                    </span>
+                  </div>
+                </div>
+               
+                <div class="filter-cell__title">소속부정<sup class="required">*</sup></div>
+                <div class="filter-cell__contents">
+                  <div class="form-group">
+                    <span class="form-input">
+                      <input type="text" >
+                    </span>
+                  </div>
+                </div>
+
+              
+                
+              </div>
+  
+            </div>
+
+
+
+          </section>
+
+          <section class="page-section">
+            <h3 class="page-section__title">콩 내역</h3>
+
+            <div class="tabs">
+              <div class="tabs-item">
+                <a class="tabs-item__button" href="#">TAB01</a>
+              </div>
+              <div class="tabs-item">
+                <a class="tabs-item__button" href="#">TAB02</a>
+              </div>
+              <div class="tabs-item">
+                <a class="tabs-item__button" href="#">TAB03</a>
+              </div>
+              <div class="tabs-item">
+                <a class="tabs-item__button" href="#">TAB04</a>
+              </div>
+            </div>
+          </section>
+
+
+        </article>
+      </div>
     </main>
 
 
