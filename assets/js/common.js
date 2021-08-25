@@ -44,7 +44,6 @@
     }
     flatpickr.localize(flatpickr.l10ns.ko);
     $('.datepicker').flatpickr(defaultOption);
-    
   }
 
  
@@ -55,17 +54,14 @@
  
 
   var initLayer = function(){
+    console.log('init layer popup');
     var $btn = $('[data-layer]');
-   
-  
     $btn.on('click', function(){
       var _this = $(this),
         $layerEle = $(_this.data('layer'))
         $layerEle.layerOpen()
     })
-    $('[data-layerBtnClose]').layerClose()
-    
-
+    $('[data-layerBtnClose]').layerClose();
   }
 
   
