@@ -251,11 +251,11 @@
             <h3 class="page-section__title">콩 내역</h3>
 
             <div class="tab-grid">
-              <div class="tab-grid__item tab-grid__item--is-active">
+              <div class="tab-grid__item">
                 <a class="tab-grid__button" href="./01.user.html">알콩(주는 콩)/ 쓴콩(준 콩) 내역
                 </a>
               </div>
-              <div class="tab-grid__item">
+              <div class="tab-grid__item tab-grid__item--is-active">
                 <a class="tab-grid__button" href="./01.user_02.html">달콩(받은 콩) 내역
                 </a>
               </div>
@@ -272,7 +272,7 @@
             <div class="filter-wrap">
 
               <div class="filter-row">
-                <div class="filter-cell__title">주는 콩 권한여부</div>
+                <div class="filter-cell__title">받은 콩 권한여부</div>
                 <div class="filter-cell__contents">
                   <span class="form-select">
                     <select>
@@ -288,14 +288,13 @@
                 <div class="filter-cell__title">총 개수</div>
                 <div class="filter-cell__text">999,999,999개</div>
                 
-                <div class="filter-cell__title" style="width:80px">사용가능 개수</div>
+                <div class="filter-cell__title" style="width:80px">황금콩 전환</div>
                 <div class="filter-cell__text">999,999,999개</div>
 
-                <div class="filter-cell__title" style="width:80px">사용 개수</div>
+                <div class="filter-cell__title" style="width:80px">받은 콩 개수</div>
                 <div class="filter-cell__text">999,999,999개</div>
 
-                <div class="filter-cell__title" style="width:80px">기간만료 개수</div>
-                <div class="filter-cell__text">999,999,999개</div>
+                
                
               
               </div>
@@ -347,6 +346,9 @@
                   <col>
                   <col>
                   <col>
+                  <col>
+                  <col>
+                  <col>
                 </colgroup>
                 <thead>
                   <tr>
@@ -361,11 +363,11 @@
                       <button class="button-sort button-sort--state-up" type="button">sort</button>
                     </th>
                     <th scope="col">
-                      부여일자
+                      받은 일자
                       <button class="button-sort button-sort--state-down" type="button">sort</button>
                     </th>
                     <th scope="col">
-                      만료기한
+                      보낸사람
                       <button class="button-sort" type="button">sort</button>
                     </th>
                     <th scope="col">
@@ -373,11 +375,11 @@
                       <button class="button-sort" type="button">sort</button>
                     </th>
                     <th scope="col">
-                      받은사람
+                      황금콩일련번호
                       <button class="button-sort" type="button">sort</button>
                     </th>
                     <th scope="col">
-                      보낸일자
+                      답장이력
                       <button class="button-sort" type="button">sort</button>
                     </th>
                     <th scope="col">삭제</th>
@@ -394,10 +396,10 @@
                     <td>1006852101001</td>
                     <td>G1006852101_001</td>
                     <td>2021.01.01</td>
-                    <td>2021.01.01</td>
-                    <td>사용</td>
                     <td>김대희(140974)</td>
-                    <td>2021.02.10</td>
+                    <td>사용</td>                    
+                    <td>H1006852101_001</td>
+                    <td>Y</td>
                     <td><button class="button-delete" type="button">삭제</button></td>
                   </tr>
 

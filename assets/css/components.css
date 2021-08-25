@@ -41,6 +41,7 @@
 }
 .form-select {
   display: inline-block;
+  min-width: 210px;
 }
 .form-textarea {
   display: inline-block;
@@ -263,6 +264,46 @@
   cursor: not-allowed;
 }
 
+.button-sort {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  font: 0/0 a;
+  color: inherit;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.button-sort::before {
+  content: "\f0dc";
+  display: inline-block;
+  line-height: 1;
+  font-size: 14px;
+}
+.button-sort--state-normal::before {
+  content: "\f0dc";
+}
+.button-sort--state-up::before {
+  content: "\f0de";
+}
+.button-sort--state-down::before {
+  content: "\f0dd";
+}
+
+.button-delete {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #6c757d;
+  border-radius: 4px;
+  color: #6c757d;
+  font: 0/0 a;
+  font-family: "Font Awesome 5 Free";
+}
+.button-delete::before {
+  content: "\f2ed";
+  font-size: 14px;
+  line-height: 1;
+}
+
 /* button group */
 .button-group {
   display: table;
@@ -309,7 +350,7 @@
   height: 100%;
   padding: 10px;
   color: #6c757d;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   text-align: center;
 }
@@ -384,6 +425,7 @@
   color: #333333;
   font-size: 12px;
   text-align: center;
+  word-break: break-word;
 }
 .table th {
   font-weight: 700;
@@ -795,9 +837,6 @@
   font-size: 16px;
   padding-bottom: 12px;
 }
-
-
-
 
 dl.table-cell {
   width: 330px;

@@ -47,13 +47,6 @@
     
   }
 
- 
-
-
- 
-
- 
-
   var initLayer = function(){
     var $btn = $('[data-layer]');
    
@@ -64,9 +57,9 @@
         $layerEle.layerOpen()
     })
     $('[data-layerBtnClose]').layerClose()
-    
-
   }
+
+  
 
   
 
