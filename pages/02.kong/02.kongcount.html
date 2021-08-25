@@ -14,12 +14,28 @@
 
   <script src="/assets/libs/font-awesome@5.15.3/js/all.min.js"></script>
   <script src="/assets/libs/jquery/jquery-3.6.0.min.js"></script>
+  
+  <link href="/assets/plugins/flatpickr@4.6.9/css/flatpickr.min.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/plugins/flatpickr@4.6.9/css/themes/material_red.css" type="text/css" rel="stylesheet" />
+  <script src="/assets/plugins/flatpickr@4.6.9/js/flatpickr.js"></script>
+  <script src="/assets/plugins/flatpickr@4.6.9/js/ko.js"></script>
 </head>
 
 <body>
   <div class="doc-wrap">
     <header class="doc-header">
-      <h1>HEADER</h1>
+      <div class="doc-header__inner">
+        <h1 class="doc-header__logo"><a class="doc-header__logo-link" href="#">알콩달콩</a></h1>
+        <div class="doc-header__title">경남은행 콩시스템 관리자</div>
+        <aside class="doc-header__aside">
+          <div class="doc-header__user">
+            <strong class="doc-header__user-name">홍길동(활빈당지부)</strong>
+          </div>
+          <div class="doc-header__logout">
+            <a href="#"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
+          </div>
+        </aside>
+      </div>
     </header>
     <nav class="doc-nav">
       <div class="doc-nav__inner">
@@ -181,8 +197,16 @@
             <table>
               <caption></caption>
               <colgroup>
+                <col width="54px">
                 <col>
-                
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col width="120px">
               </colgroup>
               <thead>
                 <tr>
@@ -194,7 +218,7 @@
                   <th scope="col">변경 후 (알/달/황금)콩</th>
                   <th scope="col">수여자 행번<br><button type="button" class="button button--flat-warning" data-layer="#popupDoner">일괄적용</button></th>
                   <th scope="col">수여자 이름</th>
-                  <th scope="col">편지<br><button type="button" class="button button--flat-warning">일괄적용</button></th>
+                  <th scope="col">편지<br><button type="button" class="button button--flat-warning" data-layer="#popupLetter">일괄적용</button></th>
                   <th></th>
                 </tr>
               </thead>
@@ -238,21 +262,26 @@
           </div>
       </div>
     </main>
-
-
   </div>
 
   <!-- 콩 일괄 적용 -->
   <div class="layer" id="popupBeanCount">
     <div class="layer-dim"></div>
-    <article class="layer-article" style="width: 280px; height: 200px;">
+    <article class="layer-article" style="width: 500px;">
       <header class="layer-header">
         <h1 class="layer-header__title">콩 일괄 적용</h1>
       </header>
       <div class="layer-body">
         <div class="layer-contents">
-          <div class="form-input">
-            <input type="number">
+          <div class="filter-wrap">
+            <div class="filter-row">
+              <div class="filter-cell__title">수량</div>
+              <div class="filter-cell__contents">
+                <span class="form-input">
+                  <input type="number" />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -267,16 +296,42 @@
   <!-- // 콩 일괄 적용 -->
 
   <!-- 수여자 일괄 적용 -->
-  <div class="layer" id="popupDoner" style="width: 400px; height: 360px;">
+  <div class="layer" id="popupDoner">
     <div class="layer-dim"></div>
-    <article class="layer-article layer-prompt">
+    <article class="layer-article" style="width: 582px;">
       <header class="layer-header">
         <h1 class="layer-header__title">수여자 일괄 적용</h1>
       </header>
       <div class="layer-body">
         <div class="layer-contents">
-          <div class="form-input">
-            <input type="number">
+          <div class="filter-wrap">
+            <div class="filter-row">
+              <div class="filter-cell__title">행번</div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-input">
+                    <input type="text" readonly />
+                  </span>
+                  <button type="button" class="button button--flat-warning">선택</button>
+                </div>
+              </div>
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">직위</div>
+              <div class="filter-cell__contents">
+                <span class="form-input">
+                  <input type="text" readonly />
+                </span>
+              </div>
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">이름</div>
+              <div class="filter-cell__contents">
+                <span class="form-input">
+                  <input type="text" readonly />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -291,6 +346,27 @@
   <!-- // 콩 일괄 적용 -->
 
 
+  <!-- 편지 일괄 적용 -->
+  <div class="layer" id="popupLetter">
+    <div class="layer-dim"></div>
+    <article class="layer-article" style="width: 500px;">
+      <header class="layer-header">
+        <h1 class="layer-header__title">편지 일괄 적용</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <textarea style="height: 200px;"></textarea>
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>닫기</button>
+          <button type="button" class="button button--flat-primary">일괄적용</button>
+        </div>
+      </footer>
+    </article>
+  </div>
+  <!-- // 편지 일괄 적용 -->
 
 
 
@@ -300,24 +376,9 @@
 
   <script src="/assets/js/common.js"></script>
 
-
-
-
-
   <script>
     $(document).ready(function () {
       console.log('??');
-
-      var $btn = $('[data-layer]');
-   
-  
-      $btn.on('click', function(){
-        var _this = $(this),
-          $layerEle = $(_this.data('layer'))
-          $layerEle.layerOpen()
-      })
-      $('[data-layerBtnClose]').layerClose();
-
     });
   </script>
 

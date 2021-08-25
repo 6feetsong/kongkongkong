@@ -14,6 +14,11 @@
 
   <script src="/assets/libs/font-awesome@5.15.3/js/all.min.js"></script>
   <script src="/assets/libs/jquery/jquery-3.6.0.min.js"></script>
+  
+  <link href="/assets/plugins/flatpickr@4.6.9/css/flatpickr.min.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/plugins/flatpickr@4.6.9/css/themes/material_red.css" type="text/css" rel="stylesheet" />
+  <script src="/assets/plugins/flatpickr@4.6.9/js/flatpickr.js"></script>
+  <script src="/assets/plugins/flatpickr@4.6.9/js/ko.js"></script>
 </head>
 
 <body>
@@ -339,7 +344,7 @@
                   <td>알콩(주는 콩) 가능 직위</td>
                   <td>
                     <span>은행장, 임원, 부장, 지점장, 과장, 심사역…</span>
-                    <button class="button" type="button">변경</button>
+                    <button class="button" type="button" data-layer="#popupRole">변경</button>
                   </td>
                   <td></td>
                   <td>
@@ -448,12 +453,49 @@
           </div>
       </div>
     </main>
-
-
   </div>
 
+  <!-- 직위설정 -->
+  <div class="layer" id="popupRole">
+    <div class="layer-dim"></div>
+    <article class="layer-article" style="width: 800px;">
+      <header class="layer-header">
+        <h1 class="layer-header__title">직위 변경</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="organization" style="height: 540px;">
+            <div class="organization-box">
+              <!-- 조직도 트리 -->
+              <div class="organization-tree">
+                조직도 트리
+              </div>
+              <!-- // 조직도 트리 -->
+              
+              <div class="organization-button-group">
+                <button type="button" class="button button--outline-success">추가</button>
+                <button type="button" class="button button--outline-danger">제외</button>
+              </div>
 
-
+              </div>
+              <!-- 조직원 목록 -->
+              <div class="organization-employee">
+                조직원 목록
+              </div>
+              <!-- //조직원 목록 -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>닫기</button>
+          <button type="button" class="button button--flat-primary">변경</button>
+        </div>
+      </footer>
+    </article>
+  </div>
+  <!-- // 직위설정 -->
 
 
 
@@ -463,13 +505,9 @@
 
   <script src="/assets/js/common.js"></script>
 
-
-
-
-
   <script>
     $(document).ready(function () {
-      console.log('??')
+      console.log('??');
     });
   </script>
 
