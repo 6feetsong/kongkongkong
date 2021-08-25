@@ -19,7 +19,18 @@
 <body>
   <div class="doc-wrap">
     <header class="doc-header">
-      <h1>HEADER</h1>
+      <div class="doc-header__inner">
+        <h1 class="doc-header__logo"><a class="doc-header__logo-link" href="#">알콩달콩</a></h1>
+        <div class="doc-header__title">경남은행 콩시스템 관리자</div>
+        <aside class="doc-header__aside">
+          <div class="doc-header__user">
+            <strong class="doc-header__user-name">홍길동(활빈당지부)</strong>
+          </div>
+          <div class="doc-header__logout">
+            <a href="#"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
+          </div>
+        </aside>
+      </div>
     </header>
     <nav class="doc-nav">
       <div class="doc-nav__inner">
@@ -245,14 +256,21 @@
   <!-- 콩 일괄 적용 -->
   <div class="layer" id="popupBeanCount">
     <div class="layer-dim"></div>
-    <article class="layer-article" style="width: 280px; height: 200px;">
+    <article class="layer-article" style="width: 500px;">
       <header class="layer-header">
         <h1 class="layer-header__title">콩 일괄 적용</h1>
       </header>
       <div class="layer-body">
         <div class="layer-contents">
-          <div class="form-input">
-            <input type="number">
+          <div class="filter-wrap">
+            <div class="filter-row">
+              <div class="filter-cell__title">수량</div>
+              <div class="filter-cell__contents">
+                <span class="form-input">
+                  <input type="number" />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -267,16 +285,42 @@
   <!-- // 콩 일괄 적용 -->
 
   <!-- 수여자 일괄 적용 -->
-  <div class="layer" id="popupDoner" style="width: 400px; height: 360px;">
+  <div class="layer" id="popupDoner">
     <div class="layer-dim"></div>
-    <article class="layer-article layer-prompt">
+    <article class="layer-article" style="width: 582px;">
       <header class="layer-header">
         <h1 class="layer-header__title">수여자 일괄 적용</h1>
       </header>
       <div class="layer-body">
         <div class="layer-contents">
-          <div class="form-input">
-            <input type="number">
+          <div class="filter-wrap">
+            <div class="filter-row">
+              <div class="filter-cell__title">행번</div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-input">
+                    <input type="text" readonly />
+                  </span>
+                  <button type="button" class="button button--flat-warning">선택</button>
+                </div>
+              </div>
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">직위</div>
+              <div class="filter-cell__contents">
+                <span class="form-input">
+                  <input type="text" readonly />
+                </span>
+              </div>
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">이름</div>
+              <div class="filter-cell__contents">
+                <span class="form-input">
+                  <input type="text" readonly />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
