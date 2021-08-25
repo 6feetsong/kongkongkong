@@ -162,12 +162,12 @@
   border: 1px solid transparent;
   color: #0d6efd;
 }
-.button--flat-prmary {
+.button--flat-primary {
   border-color: #0d6efd;
   background-color: #0d6efd;
   color: #ffffff;
 }
-.button--flat-prmary:hover {
+.button--flat-primary:hover {
   background-color: #0b5ed7;
   border-color: #0a58ca;
 }
@@ -793,4 +793,24 @@
 }
 .page-section__title {
   font-size: 16px;
+  padding-bottom: 12px;
+}
+
+
+
+
+dl.table-cell {
+  width: 330px;
+  display: block;
+  margin-bottom: 6px;
+}
+dl.table-cell:last-child {
+  margin: 0;
+}
+dl.table-cell > dt {
+  display: inline-block;
+  width: 109px;
+}
+dl.table-cell > dd {
+  display: inline-block;
 }
