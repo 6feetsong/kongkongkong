@@ -144,12 +144,151 @@
       </div>
     </nav>
     <main class="doc-main">
-      <div class="doc-contents">123123</div>
+      <div class="doc-contents">
+        <nav class="breadcrumb">
+          <a class="breadcrumb__home" href="#"><i style="width:18px" class="fas fa-home"></i></a>
+
+          <span class="breadcrumb__arrow"><i class="fas fa-chevron-right"></i></span>
+          <a href="" class="breadcrumb__link">콩 설정 관리</a>
+
+          <span class="breadcrumb__arrow"><i class="fas fa-chevron-right"></i></span>
+          <a href="" class="breadcrumb__link">콩 수량 조정</a>
+        </nav>
+        <h2 class="page-title">콩 수량 조정</h2>
+
+        <section class="page-section">
+          <h3 class="page-section__title">콩 종류 선택</h3>
+
+          <span class="form-select">
+            <select>
+              <option value="" selected>선택</option>
+              <option value="option01">알콩</option>
+              <option value="option02">달콩</option>
+              <option value="option03">황금콩</option>
+            </select>
+          </span>
+        </section>
+
+        <section class="page-section">
+          <h3 class="page-section__title">대상 선택</h3>
+          <div class="button-group">
+            <div class="button-group--position-right">
+              <button class="button button--outline-secondary" type="button">추가</button>
+              <button class="button button--outline-secondary" type="button">삭제</button>
+            </div>
+          </div>
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup>
+                <col>
+                
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">선택</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">행번</th>
+                  <th scope="col">현 보유 (알/달/황금)콩</th>
+                  <th scope="col">조정콩 수<br><button type="button" class="button button--flat-warning" data-layer="#popupBeanCount">일괄적용</button></th>
+                  <th scope="col">변경 후 (알/달/황금)콩</th>
+                  <th scope="col">수여자 행번<br><button type="button" class="button button--flat-warning" data-layer="#popupDoner">일괄적용</button></th>
+                  <th scope="col">수여자 이름</th>
+                  <th scope="col">편지<br><button type="button" class="button button--flat-warning">일괄적용</button></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input id="checkbox01" type="checkbox" name="checkboxname01">
+                  </td>
+                  <td>홍길동</td>
+                  <td>9928</td>
+                  <td>12</td>
+                  <td>
+                    <div class="form-input">
+                      <input type="number">
+                    </div>
+                  </td>
+                  <td>50</td>
+                  <td>
+                    <div class="form-input">
+                      <input type="text">
+                    </div>
+                  </td>
+                  <td></td>
+                  <td>
+                    <div class="form-input">
+                      <input type="text">
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button" type="button">수정</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="button-group">
+              <div class="button-group--position-right">
+                <button class="button button--flat-primary" type="button">완료</button>
+              </div>
+            </div>
+          </div>
+      </div>
     </main>
 
 
   </div>
 
+  <!-- 콩 일괄 적용 -->
+  <div class="layer" id="popupBeanCount">
+    <div class="layer-dim"></div>
+    <article class="layer-article" style="width: 280px; height: 200px;">
+      <header class="layer-header">
+        <h1 class="layer-header__title">콩 일괄 적용</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="form-input">
+            <input type="number">
+          </div>
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>닫기</button>
+          <button type="button" class="button button--flat-primary">일괄적용</button>
+        </div>
+      </footer>
+    </article>
+  </div>
+  <!-- // 콩 일괄 적용 -->
+
+  <!-- 수여자 일괄 적용 -->
+  <div class="layer" id="popupDoner" style="width: 400px; height: 360px;">
+    <div class="layer-dim"></div>
+    <article class="layer-article layer-prompt">
+      <header class="layer-header">
+        <h1 class="layer-header__title">수여자 일괄 적용</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="form-input">
+            <input type="number">
+          </div>
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>닫기</button>
+          <button type="button" class="button button--flat-primary">일괄적용</button>
+        </div>
+      </footer>
+    </article>
+  </div>
+  <!-- // 콩 일괄 적용 -->
 
 
 
@@ -167,9 +306,19 @@
 
   <script>
     $(document).ready(function () {
-      console.log('??')
+      console.log('??');
 
-    })
+      var $btn = $('[data-layer]');
+   
+  
+      $btn.on('click', function(){
+        var _this = $(this),
+          $layerEle = $(_this.data('layer'))
+          $layerEle.layerOpen()
+      })
+      $('[data-layerBtnClose]').layerClose();
+
+    });
   </script>
 
 </body>

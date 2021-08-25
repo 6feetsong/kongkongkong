@@ -19,7 +19,18 @@
 <body>
   <div class="doc-wrap">
     <header class="doc-header">
-      <h1>HEADER</h1>
+      <div class="doc-header__inner">
+        <h1 class="doc-header__logo"><a class="doc-header__logo-link" href="#">알콩달콩</a></h1>
+        <div class="doc-header__title">경남은행 콩시스템 관리자</div>
+        <aside class="doc-header__aside">
+          <div class="doc-header__user">
+            <strong class="doc-header__user-name">홍길동(활빈당지부)</strong>
+          </div>
+          <div class="doc-header__logout">
+            <a href="#"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
+          </div>
+        </aside>
+      </div>
     </header>
     <nav class="doc-nav">
       <div class="doc-nav__inner">
@@ -144,7 +155,298 @@
       </div>
     </nav>
     <main class="doc-main">
-      <div class="doc-contents">123123</div>
+      <div class="doc-contents">
+        <nav class="breadcrumb">
+          <a class="breadcrumb__home" href="#"><i style="width:18px" class="fas fa-home"></i></a>
+
+          <span class="breadcrumb__arrow"><i class="fas fa-chevron-right"></i></span>
+          <a href="" class="breadcrumb__link">콩 설정 관리</a>
+
+          <span class="breadcrumb__arrow"><i class="fas fa-chevron-right"></i></span>
+          <a href="" class="breadcrumb__link">콩 설정 관리</a>
+        </nav>
+        <h2 class="page-title">콩 설정 관리</h2>
+
+        <section class="page-section">
+          <h3 class="page-section__title">알콩(주는 콩) 설정 관리</h3>
+
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup>
+                <col>
+                <col width="360px;">
+                <col width="160px;">
+                <col width="120px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">항목</th>
+                  <th scope="col">내용</th>
+                  <th scope="col">비고</th>
+                  <th scope="col">수정</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>알콩(주는 콩) 자동 생성일</td>
+                  <td>
+                    <dl class="table-cell">
+                      <dt>
+                        1/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-datepicker">
+                          <input class="datepicker" type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl class="table-cell">
+                      <dt>
+                        2/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-datepicker">
+                          <input class="datepicker" type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl class="table-cell">
+                      <dt>
+                        3/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-datepicker">
+                          <input class="datepicker" type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl class="table-cell">
+                      <dt>
+                        4/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-datepicker">
+                          <input class="datepicker" type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                  </td>
+                  <td></td>
+                  <td>
+                    <button class="button" type="button">수정</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>알콩(주는 콩) 자동 소멸일</td>
+                  <td>
+                    <dl class="table-cell">
+                      <dt>
+                        1/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-datepicker">
+                          <input class="datepicker" type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl class="table-cell">
+                      <dt>
+                        2/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-datepicker">
+                          <input class="datepicker" type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl class="table-cell">
+                      <dt>
+                        3/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-datepicker">
+                          <input class="datepicker" type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl class="table-cell">
+                      <dt>
+                        4/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-datepicker">
+                          <input class="datepicker" type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                  </td>
+                  <td></td>
+                  <td>
+                    <button class="button" type="button">수정</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>알콩(주는 콩) 자동 부여개수</td>
+                  <td>
+                    <dl class="table-cell">
+                      <dt>
+                        1/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-input">
+                          <input type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl class="table-cell">
+                      <dt>
+                        2/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-input">
+                          <input type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl class="table-cell">
+                      <dt>
+                        3/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-input">
+                          <input type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                    <dl class="table-cell">
+                      <dt>
+                        4/4 분기
+                      </dt>
+                      <dd>
+                        <span class="form-input">
+                          <input type="text" />
+                        </span>
+                      </dd>
+                    </dl>
+                  </td>
+                  <td></td>
+                  <td>
+                    <button class="button" type="button">수정</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>알콩(주는 콩) 가능 직위</td>
+                  <td>
+                    <span>은행장, 임원, 부장, 지점장, 과장, 심사역…</span>
+                    <button class="button" type="button">변경</button>
+                  </td>
+                  <td></td>
+                  <td>
+                    <button class="button" type="button">수정</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1일 1인에게 알콩 주기 가능 횟수</td>
+                  <td>
+                    <span class="form-input">
+                      <input type="text" />
+                    </span>
+                  </td>
+                  <td></td>
+                  <td>
+                    <button class="button" type="button">수정</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1회 지급 가능 알콩 수</td>
+                  <td>
+                    <span class="form-input">
+                      <input type="text" />
+                    </span>
+                  </td>
+                  <td></td>
+                  <td>
+                    <button class="button" type="button">수정</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1일 지급가능 알콩 수</td>
+                  <td>
+                    <span class="form-input">
+                      <input type="text" />
+                    </span>
+                  </td>
+                  <td></td>
+                  <td>
+                    <button class="button" type="button">수정</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1분기 당 특정인에게 줄 수 있는 알콩 수</td>
+                  <td>
+                    <span class="form-input">
+                      <input type="text" />
+                    </span>
+                  </td>
+                  <td></td>
+                  <td>
+                    <button class="button" type="button">수정</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </section>
+
+
+        <section class="page-section">
+          <h3 class="page-section__title">달콩(받은 콩)/황금콩 설정 관리</h3>
+
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup>
+                <col>
+                <col width="360px;">
+                <col width="160px;">
+                <col width="120px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">항목</th>
+                  <th scope="col">내용</th>
+                  <th scope="col">비고</th>
+                  <th scope="col">수정</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>달콩(받은 콩) 가능 직위</td>
+                  <td>
+                    <span>은행장, 임원, 부장, 지점장, 과장, 심사역…</span>
+                    <button class="button" type="button">변경</button>
+                  </td>
+                  <td></td>
+                  <td>
+                    <button class="button" type="button">수정</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>황금콩 1개로 전환 필요한 달콩 개수</td>
+                  <td>
+                    <span class="form-input">
+                      <input type="text" />
+                    </span>
+                  </td>
+                  <td></td>
+                  <td>
+                    <button class="button" type="button">수정</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
     </main>
 
 
@@ -168,8 +470,7 @@
   <script>
     $(document).ready(function () {
       console.log('??')
-
-    })
+    });
   </script>
 
 </body>
