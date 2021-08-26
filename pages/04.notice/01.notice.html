@@ -14,6 +14,11 @@
 
   <script src="/assets/libs/font-awesome@5.15.3/js/all.min.js"></script>
   <script src="/assets/libs/jquery/jquery-3.6.0.min.js"></script>
+  
+  <link href="/assets/plugins/flatpickr@4.6.9/css/flatpickr.min.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/plugins/flatpickr@4.6.9/css/themes/material_red.css" type="text/css" rel="stylesheet" />
+  <script src="/assets/plugins/flatpickr@4.6.9/js/flatpickr.js"></script>
+  <script src="/assets/plugins/flatpickr@4.6.9/js/ko.js"></script>
 </head>
 
 <body>
@@ -171,6 +176,138 @@
 
         <section class="page-section">
           <h3 class="page-section__title">조회조건</h3>
+
+          <div class="filter-wrap">
+
+            <div class="filter-row">
+              <div class="filter-cell__title">
+                등록기간
+                <span class="form-checkbox"></span>(전체: <input id="checkboxNormal" type="checkbox">)</span>
+              </div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-datepicker">
+                    <input type="text" class="datepicker">
+                  </span>
+                  <span>&nbsp;~</span>
+                  <span class="form-datepicker">
+                    <input type="text" class="datepicker">
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-row">
+              <div class="filter-cell__title">상태</div>
+              <div class="filter-cell__contents">
+                  <span class="form-select">
+                    <select>
+                      <option value="" selected>전체</option>
+                      <option value="2">노출</option>
+                      <option value="3">삭제</option>
+                      <option value="4">숨김</option>
+                    </select>
+                  </span>
+              </div>
+            </div>
+
+            <div class="filter-row">
+              <div class="filter-cell__title">
+                등록직원
+                <span class="form-checkbox"></span>(전체: <input id="checkboxNormal" type="checkbox">)</span>
+              </div>
+              <div class="filter-cell__contents">
+                <div class="flex-container">
+                  <span class="flex-container-fill" style="line-height: 30px;">은행장, 임원, 부장, 지점장, 과장, 심사역…</span>
+                  <button class="button" type="button" data-layer="#popupRole">변경</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-group">
+            <div class="button-group--position-right">
+              <button class="button button--flat-primary" type="button" data-layer="#popupProductAdd">조회</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-section">
+          <h3 class="page-section__title">현재 등록 글</h3>
+
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup>
+                <col width="64px;">
+                <col>
+                <col width="64px;">
+                <col width="120px;">
+                <col width="96px;">
+                <col width="120px;">
+                <col width="96px;">
+                <col width="64px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">일련번호</th>
+                  <th scope="col">내용</th>
+                  <th scope="col">상태</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">등록자</th>
+                  <th scope="col">최종수정일</th>
+                  <th scope="col">최종수정자</th>
+                  <th scope="col">우선표시여부</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0001</td>
+                  <td><a href="#" data-layer="#popupModifyNotice">콩 시스템 오픈 안내</a></td>
+                  <td>노출</td>
+                  <td>2021-10-01</td>
+                  <td>관리자</td>
+                  <td>2021-10-01</td>
+                  <td>관리자</td>
+                  <td>Y</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="pagenation" class="guide-box">
+            <div class="pagenation">
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-double-left"></i></a>
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-left"></i></a>
+  
+  
+              <a class="pagenation-item pagenation-item--is-active" href="#">1</a>
+              <a class="pagenation-item" href="#">2</a>
+              <a class="pagenation-item" href="#">3</a>
+              <a class="pagenation-item" href="#">4</a>
+              <a class="pagenation-item" href="#">5</a>
+              <a class="pagenation-item" href="#">6</a>
+              <a class="pagenation-item" href="#">7</a>
+              <a class="pagenation-item" href="#">8</a>
+              <a class="pagenation-item" href="#">9</a>
+              <a class="pagenation-item" href="#">10</a>
+  
+  
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-right"></i></a>
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-double-right"></i></a>
+            </div>
+          </div>
+  
+
+          <div class="button-group">
+            <div class="button-group--position-left">
+              <button type="button" class="button button--flat-secondary">엑셀저장</button>
+            </div>
+            <div class="button-group--position-right">
+              <button class="button button--flat-primary" type="button" data-layer="#popupAddNotice">신규등록</button>
+            </div>
+          </div>
+
         </section>
       </div>
     </main>
@@ -179,8 +316,134 @@
   </div>
 
 
+  <!-- 공지사항 신규등록 -->
+  <div class="layer" id="popupAddNotice">
+    <div class="layer-dim"></div>
+    <article class="layer-article" style="width: 800px;">
+      <header class="layer-header">
+        <h1 class="layer-header__title">공지사항 신규등록 </h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="filter-wrap">
+
+            <div class="filter-row">
+              <div class="filter-cell__title">제목<sup class="required">*</sup></div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-input">
+                    <input type="text" readonly />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-row">
+              <div class="filter-cell__title">등록일</div>
+              <div class="filter-cell__contents">
+                2021-10-01
+              </div>
+              <div class="filter-cell__title">작성자</div>
+              <div class="filter-cell__contents">
+                관리자(200011)
+              </div>
+            </div>
+
+            <div class="filter-row">
+              <div class="filter-cell__title">내용<sup class="required">*</sup></div>
+              <div class="filter-cell__contents">
+                <div class="form-textarea form-textarea--full">
+                  <textarea></textarea>
+                  <span class="form-textarea__count">300/1000</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>닫기</button>
+          <button type="button" class="button button--flat-primary">등록하기</button>
+        </div>
+      </footer>
+    </article>
+  </div>
+  <!-- // 공지사항 신규등록  -->
 
 
+  <!-- 공지사항 신규등록 -->
+  <div class="layer" id="popupModifyNotice">
+    <div class="layer-dim"></div>
+    <article class="layer-article" style="width: 800px;">
+      <header class="layer-header">
+        <h1 class="layer-header__title">공지사항 수정</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="filter-wrap">
+
+            <div class="filter-row">
+              <div class="filter-cell__title">제목<sup class="required">*</sup></div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-input">
+                    <input type="text" readonly />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-row">
+              <div class="filter-cell__title">등록일</div>
+              <div class="filter-cell__contents">
+                2021-10-01
+              </div>
+              <div class="filter-cell__title">작성자</div>
+              <div class="filter-cell__contents">
+                관리자(200011)
+              </div>
+            </div>
+
+            <div class="filter-row">
+              <div class="filter-cell__title">내용<sup class="required">*</sup></div>
+              <div class="filter-cell__contents">
+                <div class="form-textarea form-textarea--full">
+                  <textarea></textarea>
+                  <span class="form-textarea__count">300/1000</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-row">
+              <div class="filter-cell__title">노출여부<sup class="required">*</sup></div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-radio">
+                    <input id="radio01" type="radio"  name="radioname01">
+                    <label for="radio01">예</label>
+                  </span>
+                  <span class="form-radio">
+                    <input id="radio02" type="radio" name="radioname01">
+                    <label for="radio02">아니오</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>닫기</button>
+          <button type="button" class="button button--flat-primary">등록하기</button>
+        </div>
+      </footer>
+    </article>
+  </div>
+  <!-- // 공지사항 신규등록  -->
 
 
   <!-- <script src="/assets/libs/bootstrap@5.1.0/js/bootstrap.bundle.min.js"></script>
