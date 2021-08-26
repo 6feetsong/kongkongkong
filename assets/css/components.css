@@ -43,13 +43,19 @@
   display: inline-block;
   /* min-width: 210px; */
   width: 100%;
-  max-width: 200px;
+  max-width: 210px;
 }
 .form-textarea {
   display: inline-block;
 }
+.form-textarea.form-textarea--full {
+  display: block;
+}
 .form-textarea > textarea {
   min-height: 200px;
+}
+.form-textarea.form-textarea--full > textarea {
+  min-height: 400px;
 }
 .form-textarea__count {
   display: block;
@@ -155,6 +161,9 @@
   background-color: #333333;
   color: #ffffff;
   font-size: 14px;
+}
+.button.button--sm {
+  min-width: 54px;
 }
 .button--type-link {
   text-decoration: underline;
@@ -459,7 +468,7 @@
 
 /*  pagenation */
 .pagenation {
-  margin-top: 60px;
+  margin-top: 12px;
   text-align: center;
 }
 .pagenation-item {
@@ -525,11 +534,7 @@
 .organization-box .head_search{padding:12px 16px;background:#FAFAFA}
 .organization-box .head_search .search_icon{position:absolute;top:0;right:0;padding:9px 8px 9px 4px;line-height:0;opacity:0.6;pointer-events:none}
 .box_approveline .head_search{position:absolute;top:0;left:0;right:0;padding:11px 16px} */
-.organization-button-group {
-  width: 120px;
-  text-align: center;
-  vertical-align: middle;
-}
+
 .organization-tree {
   flex: 1;
   min-width: 300px;
@@ -855,4 +860,14 @@ dl.table-cell > dt {
 }
 dl.table-cell > dd {
   display: inline-block;
+}
+
+
+
+.flex-container {
+  display: flex;
+  width: 100%;
+}
+.flex-container > .flex-container-fill {
+  flex: 1 1 auto;
 }
