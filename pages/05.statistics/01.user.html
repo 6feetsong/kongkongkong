@@ -14,12 +14,28 @@
 
   <script src="/assets/libs/font-awesome@5.15.3/js/all.min.js"></script>
   <script src="/assets/libs/jquery/jquery-3.6.0.min.js"></script>
+  
+  <link href="/assets/plugins/flatpickr@4.6.9/css/flatpickr.min.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/plugins/flatpickr@4.6.9/css/themes/material_red.css" type="text/css" rel="stylesheet" />
+  <script src="/assets/plugins/flatpickr@4.6.9/js/flatpickr.js"></script>
+  <script src="/assets/plugins/flatpickr@4.6.9/js/ko.js"></script>
 </head>
 
 <body>
   <div class="doc-wrap">
     <header class="doc-header">
-      <h1>HEADER</h1>
+      <div class="doc-header__inner">
+        <h1 class="doc-header__logo"><a class="doc-header__logo-link" href="#">알콩달콩</a></h1>
+        <div class="doc-header__title">경남은행 콩시스템 관리자</div>
+        <aside class="doc-header__aside">
+          <div class="doc-header__user">
+            <strong class="doc-header__user-name">홍길동(활빈당지부)</strong>
+          </div>
+          <div class="doc-header__logout">
+            <a href="#"><i class="fas fa-sign-out-alt"></i>로그아웃</a>
+          </div>
+        </aside>
+      </div>
     </header>
     <nav class="doc-nav">
       <div class="doc-nav__inner">
@@ -137,14 +153,31 @@
               <span class="doc-nav__text">직원별 통계</span>
             </a>
           </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/05.statistics/06.product.html">
+              <span class="doc-nav__text">상품별 통계</span>
+            </a>
+          </div>
         </div>
-
-
-
       </div>
     </nav>
     <main class="doc-main">
-      <div class="doc-contents">123123</div>
+      <div class="doc-contents">
+        <nav class="breadcrumb">
+          <a class="breadcrumb__home" href="#"><i style="width:18px" class="fas fa-home"></i></a>
+
+          <span class="breadcrumb__arrow"><i class="fas fa-chevron-right"></i></span>
+          <a href="" class="breadcrumb__link">통계 관리</a>
+
+          <span class="breadcrumb__arrow"><i class="fas fa-chevron-right"></i></span>
+          <a href="" class="breadcrumb__link">사용량 통계</a>
+        </nav>
+        <h2 class="page-title">사용량 통계</h2>
+
+        <section class="page-section">
+          <h3 class="page-section__title">조회조건</h3>
+        </section>
+      </div>
     </main>
 
 
