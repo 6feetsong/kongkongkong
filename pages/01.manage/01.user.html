@@ -193,7 +193,7 @@
                     <span class="form-input">
                       <input type="text" >
                     </span>
-                    <button type="button" class="button button--flat-warning">행번변경</button>
+                    <button type="button" class="button button--flat-warning" data-layer="#layerEmployeeChange">행번변경</button>
                   </div>
                 </div>
                 
@@ -487,6 +487,61 @@
 
 
 
+
+
+  <div class="layer" id="layerEmployeeChange">
+    <div class="layer-dim"></div>
+    <article class="layer-article"  style="width:640px">
+      <header class="layer-header">
+        <h1 class="layer-header__title">행번변경</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="filter-wrap">
+
+            <div class="filter-row">
+              <div class="filter-cell__title">변경 후 행번</div>
+              <div class="filter-cell__contents">
+                12341234
+                <button type="button" class="button button--outline-secondary" data-layerbtnclose="">정보불러오기</button>
+              </div>
+              
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">이름</div>
+              <div class="filter-cell__contents">홍길동</div>
+              
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">직위</div>
+              <div class="filter-cell__contents">의적</div>
+              
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">소속부정</div>
+              <div class="filter-cell__contents">활빈당지부</div>
+              
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">휴대폰번호</div>
+              <div class="filter-cell__contents">010-1234-1234</div>
+              
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>닫기</button>
+          <button type="button" class="button button--flat-primary">변경</button>
+        </div>
+
+      </footer>
+    </article>
+
+  </div>
 
 
   <!-- <script src="/assets/libs/bootstrap@5.1.0/js/bootstrap.bundle.min.js"></script>

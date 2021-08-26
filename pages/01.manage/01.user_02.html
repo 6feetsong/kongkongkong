@@ -405,7 +405,7 @@
                     <td>사용</td>                    
                     <td>H1006852101_001</td>
                     <td>Y</td>
-                    <td><button class="button-delete" type="button">삭제</button></td>
+                    <td><button class="button-delete" type="button" data-layer="#layerKongHistoryDel">삭제</button></td>
                   </tr>
 
                   <tr>
@@ -483,6 +483,59 @@
 
 
 
+
+  <div class="layer" id="layerKongHistoryDel">
+    <div class="layer-dim"></div>
+    <article class="layer-article"  style="width:400px">
+      <header class="layer-header">
+        <h1 class="layer-header__title">콩이력 삭제</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="filter-wrap">
+
+            <div class="filter-row">
+              <div class="filter-cell__title"><strong>콩일련번호</strong></div>
+              <div class="filter-cell__contents">
+                <strong>12341234</strong>
+              </div>
+              
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">보낸사람</div>
+              <div class="filter-cell__contents">홍길동</div>
+              
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">받은사람</div>
+              <div class="filter-cell__contents">김삿갓</div>
+              
+            </div>
+            <div class="filter-row">
+              
+              <div class="filter-cell__contents">
+              해당 콩 삭제 시, 보낸내역, 받은내역, 편지, 답장 등이 모두 삭제 됩니다. 
+            <br>
+            <br>
+              삭제하시겠습니까?
+              </div>
+
+            </div>
+          </div>
+            
+        </div>
+
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>닫기</button>
+          <button type="button" class="button button--flat-danger">삭제</button>
+        </div>
+
+      </footer>
+    </article>
+
+  </div>
 
 
 
