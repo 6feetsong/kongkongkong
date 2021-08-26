@@ -102,13 +102,13 @@ img {
   border: none;
   vertical-align: top;
 }
-
+/* 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
   -webkit-appearance: none;
   margin: 0;
-}
+} */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
