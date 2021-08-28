@@ -179,6 +179,74 @@
 
         <section class="page-section">
           <h3 class="page-section__title">대상선택</h3>
+
+          <div class="filter-wrap">
+
+            <div class="filter-row">
+              <div class="filter-cell__title">
+                부점별 검색
+                <span class="form-checkbox"></span>(전체: <input id="checkboxNormal" type="checkbox">)</span>
+              </div>
+              <div class="filter-cell__contents">
+                <div class="flex-container">
+                  <span class="flex-container-fill" style="line-height: 30px;">은행장, 임원, 부장, 지점장, 과장, 심사역…</span>
+                  <button class="button-icon button-icon--search" type="button" data-layer="#popupRole"></button>
+                </div>
+              </div>
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">
+                직급 검색
+                <span class="form-checkbox"></span>(전체: <input id="checkboxNormal" type="checkbox">)</span>
+              </div>
+              <div class="filter-cell__contents">
+                <div class="flex-container">
+                  <span class="flex-container-fill" style="line-height: 30px;">은행장, 임원, 부장, 지점장, 과장, 심사역…</span>
+                  <button class="button-icon button-icon--search" type="button" data-layer="#popupRole"></button>
+                </div>
+              </div>
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">
+                직원별 검색
+                <span class="form-checkbox"></span>(전체: <input id="checkboxNormal" type="checkbox">)</span>
+              </div>
+              <div class="filter-cell__contents">
+                <div class="flex-container">
+                  <span class="flex-container-fill" style="line-height: 30px;">은행장, 임원, 부장, 지점장, 과장, 심사역…</span>
+                  <button class="button-icon button-icon--search" type="button" data-layer="#popupRole"></button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="page-section">
+          <h3 class="page-section__title">내용 (최대 1000자)</h3>
+
+          <div class="form-textarea form-textarea--full">
+            <textarea></textarea>
+            <span class="form-textarea__count">300/1000</span>
+          </div>
+
+          <div class="button-group">
+            <div class="button-group--position-right">
+              <button type="button" class="button button--flat-primary" data-layer="#popupSendPush">발송</button>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="page-section">
+          <h3 class="page-section__title">팝업</h3>
+          <div class="button-group">
+            <div class="button-group--position-center">
+              <button type="button" class="button button--flat-secondary" data-layer="#popupSendComplete">발송완료 팝업 확인</button>
+            </div>
+          </div>
         </section>
       </div>
     </main>
@@ -188,6 +256,76 @@
 
 
 
+
+  <!-- 푸쉬발송 -->
+  <div class="layer" id="popupSendPush">
+    <div class="layer-dim"></div>
+    <article class="layer-article" style="width: 524px;">
+      <header class="layer-header">
+        <h1 class="layer-header__title">푸쉬발송</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="filter-wrap">
+            <div class="filter-row">
+              <div class="filter-cell__title">대상자</div>
+              <div class="filter-cell__contents">2,333명</div>
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">내용</div>
+              <div class="filter-cell__contents">
+                신상품 등록! 황금콩 2천개를 모으면 GV80을 드립니다. 많은 참여바랍니다.
+                GV80은 딱 1명에게만 주어집니다. 힘내세요.
+              </div>
+            </div>
+          </div>
+          <p class="label-warning">※ 해당 내용으로 푸쉬를 발송합니다. 푸쉬는 50명씩 순차적으로 발송됩니다.</p>
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>취소</button>
+          <button type="button" class="button button--flat-primary">발송</button>
+        </div>
+      </footer>
+    </article>
+  </div>
+  <!-- // 푸쉬발송 -->
+
+
+  <!-- 푸쉬발송 완료 -->
+  <div class="layer" id="popupSendComplete">
+    <div class="layer-dim"></div>
+    <article class="layer-article" style="width: 524px;">
+      <header class="layer-header">
+        <h1 class="layer-header__title">푸쉬발송 요청완료</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="filter-wrap">
+            <div class="filter-row">
+              <div class="filter-cell__title">대상자</div>
+              <div class="filter-cell__contents">2,333명</div>
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">내용</div>
+              <div class="filter-cell__contents">
+                신상품 등록! 황금콩 2천개를 모으면 GV80을 드립니다. 많은 참여바랍니다.
+                GV80은 딱 1명에게만 주어집니다. 힘내세요.
+              </div>
+            </div>
+          </div>
+          <p class="label-warning">※ 해당 내용으로 푸쉬발송 요청이 완료되었습니다.</p>
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>확인</button>
+        </div>
+      </footer>
+    </article>
+  </div>
+  <!-- // 푸쉬발송 완료 -->
 
 
 
