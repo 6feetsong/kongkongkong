@@ -43,7 +43,7 @@
   display: inline-block;
   /* min-width: 210px; */
   width: 100%;
-  max-width: 200px;
+  max-width: 210px;
 }
 .form-textarea {
   display: inline-block;
@@ -359,8 +359,24 @@
   font-size: 14px;
   line-height: 1;
 }
-.button-icon--save::before {
-  content: "\1f50d";
+.button-icon--search::before {
+  content: "\f002";
+  font-size: 14px;
+  line-height: 1;
+}
+.button-icon--edit::before {
+  content: "\f044";
+  font-size: 14px;
+  line-height: 1;
+}
+.button-icon--delete::before {
+  content: "\f2ed";
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+}
+.button-icon-cancel::before {
+  content: "\f00d";
   font-size: 14px;
   line-height: 1;
 }

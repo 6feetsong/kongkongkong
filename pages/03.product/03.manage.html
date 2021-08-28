@@ -14,6 +14,11 @@
 
   <script src="/assets/libs/font-awesome@5.15.3/js/all.min.js"></script>
   <script src="/assets/libs/jquery/jquery-3.6.0.min.js"></script>
+  
+  <link href="/assets/plugins/flatpickr@4.6.9/css/flatpickr.min.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/plugins/flatpickr@4.6.9/css/themes/material_red.css" type="text/css" rel="stylesheet" />
+  <script src="/assets/plugins/flatpickr@4.6.9/js/flatpickr.js"></script>
+  <script src="/assets/plugins/flatpickr@4.6.9/js/ko.js"></script>
 </head>
 
 <body>
@@ -174,6 +179,71 @@
 
         <section class="page-section">
           <h3 class="page-section__title">현재 담당자</h3>
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col width="54px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>부서</th>
+                  <th>직책</th>
+                  <th>이름</th>
+                  <th>행번</th>
+                  <th>내선번호</th>
+                  <th>등록일</th>
+                  <th>변경</th>
+                </tr>
+              </thead>
+              <tbody>
+                <td>IT기획부</td>
+                <td>부부장</td>
+                <td>손상혁</td>
+                <td>A99806</td>
+                <td>180-3306</td>
+                <td>2021-10-01</td>
+                <td>
+                  <button type="button" class="button-icon button-icon--edit"></button>
+                </td>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="button-group">
+            <div class="button-group--position-right">
+              <button type="button" class="button button--flat-primary">완료</button>
+            </div>
+          </div>
+            
+          <div id="pagenation">
+            <div class="pagenation">
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-double-left"></i></a>
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-left"></i></a>
+  
+  
+              <a class="pagenation-item pagenation-item--is-active" href="#">1</a>
+              <a class="pagenation-item" href="#">2</a>
+              <a class="pagenation-item" href="#">3</a>
+              <a class="pagenation-item" href="#">4</a>
+              <a class="pagenation-item" href="#">5</a>
+              <a class="pagenation-item" href="#">6</a>
+              <a class="pagenation-item" href="#">7</a>
+              <a class="pagenation-item" href="#">8</a>
+              <a class="pagenation-item" href="#">9</a>
+              <a class="pagenation-item" href="#">10</a>
+  
+  
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-right"></i></a>
+              <a class="pagenation-item pagenation-item--type-arrow" href="#"><i class="fas fa-angle-double-right"></i></a>
+            </div>
+          </div>
         </section>
       </div>
     </main>
