@@ -891,7 +891,7 @@
 
 .organization-box-header {
   display: flex;
-  width: 560px;
+  width: 100%;
   background-color: #f8f8f8;
   border: 1px solid #dddddd;
   box-sizing: border-box;
@@ -904,7 +904,9 @@
 .organization-box-header > .organization-box-header-cell {
   width: 100px;
   text-align: center;
+  padding: 10px 15px;
   border-left: 1px solid #dddddd;
+  box-sizing: border-box;
 }
 
 
