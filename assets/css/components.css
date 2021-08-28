@@ -343,7 +343,7 @@
   font-size: 14px;
   line-height: 1;
 }
-.button-save {
+.button-icon {
   width: 24px;
   height: 24px;
   vertical-align: middle;
@@ -354,11 +354,17 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
-.button-save::before {
+.button-icon--save::before {
   content: "\f0c7";
   font-size: 14px;
   line-height: 1;
 }
+.button-icon--save::before {
+  content: "\1f50d";
+  font-size: 14px;
+  line-height: 1;
+}
+
 
 /* button group */
 .button-group {
