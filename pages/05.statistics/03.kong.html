@@ -60,6 +60,11 @@
               <span class="doc-nav__text">관리자 정보관리</span>
             </a>
           </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/01.manage/03.group_menu.html">
+              <span class="doc-nav__text">그룹별 메뉴관리</span>
+            </a>
+          </div>
         </div>
 
         <div class="doc-nav__1depth  ">
@@ -179,7 +184,256 @@
 
         <section class="page-section">
           <h3 class="page-section__title">조회조건</h3>
+          <div class="filter-wrap">
+            <div class="filter-row">
+              <div class="filter-cell__title">
+                조회기간
+                <span class="form-checkbox"></span>(전체: <input id="checkboxNormal" type="checkbox">)</span>
+              </div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-label">시작일:&nbsp;</span>
+                  <span class="form-datepicker">
+                    <input type="text" class="datepicker">
+                  </span>
+                  <span class="form-label">&nbsp;~ 종료일:&nbsp;</span>
+                  <span class="form-datepicker">
+                    <input type="text" class="datepicker">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
+
+        <section class="page-section">
+          <h3 class="page-section__title">전체 콩현황</h3>
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup></colgroup>
+              <thead>
+                <tr>
+                  <th>배분알콩수</th>
+                  <th>사용알콩수</th>
+                  <th>알콩사용률</th>
+                  <th>답장응답수</th>
+                  <th>답장응답률</th>
+                  <th>황금콩 전환수</th>
+                  <th>상품전환 수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>230,000</td>
+                  <td>115,000</td>
+                  <td>50.0%</td>
+                  <td>56,000</td>
+                  <td>48.7%</td>
+                  <td>1,000</td>
+                  <td>500</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <section class="page-section">
+          <h3 class="page-section__title">알콩 사용 랭킹</h3>
+          <div class="form-group" style="margin-bottom: 12px;">
+            <span class="form-label">조회조건: </span>
+            <span class="form-number--sm">
+              <input type="number" value="5"/>
+            </span>
+            <span class="form-label">건</span>
+          </div>
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup></colgroup>
+              <thead>
+                <tr>
+                  <th>랭킹</th>
+                  <th>부점</th>
+                  <th>행번</th>
+                  <th>이름</th>
+                  <th>부여 알콩수</th>
+                  <th>사용 알콩수</th>
+                  <th>알콩 사용률</th>
+                  <th>수신 답장수</th>
+                  <th>답장 수신율</th>
+                  <th>받은 달콩수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>디지털금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                  <td>92</td>
+                  <td>92</td>
+                  <td>100%</td>
+                  <td>46</td>
+                  <td>50.0%</td>
+                  <td><button class="button button--type-link-sm" data-layer="#popupBeanStat">500</button></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>디지털금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                  <td>92</td>
+                  <td>92</td>
+                  <td>100%</td>
+                  <td>46</td>
+                  <td>50.0%</td>
+                  <td><button class="button button--type-link-sm" data-layer="#popupBeanStat">500</button></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>디지털금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                  <td>92</td>
+                  <td>92</td>
+                  <td>100%</td>
+                  <td>46</td>
+                  <td>50.0%</td>
+                  <td><button class="button button--type-link-sm" data-layer="#popupBeanStat">500</button></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>디지털금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                  <td>92</td>
+                  <td>92</td>
+                  <td>100%</td>
+                  <td>46</td>
+                  <td>50.0%</td>
+                  <td><button class="button button--type-link-sm" data-layer="#popupBeanStat">500</button></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>디지털금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                  <td>92</td>
+                  <td>92</td>
+                  <td>100%</td>
+                  <td>46</td>
+                  <td>50.0%</td>
+                  <td><button class="button button--type-link-sm" data-layer="#popupBeanStat">500</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="button-group">
+            <div class="button-group--position-left">
+              <button type="button" class="button button--outline-secondary">엑셀저장</button>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="page-section">
+          <h3 class="page-section__title">달콩 사용 랭킹</h3>
+          <div class="form-group" style="margin-bottom: 12px;">
+            <span class="form-label">조회조건: </span>
+            <span class="form-number--sm">
+              <input type="number" value="5"/>
+            </span>
+            <span class="form-label">건</span>
+          </div>
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup></colgroup>
+              <thead>
+                <tr>
+                  <th>랭킹</th>
+                  <th>부점</th>
+                  <th>행번</th>
+                  <th>이름</th>
+                  <th>받은 달콩 수</th>
+                  <th>답장 발송 수</th>
+                  <th>답장 응답율</th>
+                  <th>황금콩 전환 수</th>
+                  <th>선물 전환 수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <tr>
+                    <td>1</td>
+                    <td>디지털금융개발부</td>
+                    <td>100685</td>
+                    <td>김성휘</td>
+                    <td>700</td>
+                    <td>480</td>
+                    <td>68.6%</td>
+                    <td>10</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>디지털금융개발부</td>
+                    <td>100685</td>
+                    <td>김성휘</td>
+                    <td>700</td>
+                    <td>480</td>
+                    <td>68.6%</td>
+                    <td>10</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>디지털금융개발부</td>
+                    <td>100685</td>
+                    <td>김성휘</td>
+                    <td>700</td>
+                    <td>480</td>
+                    <td>68.6%</td>
+                    <td>10</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>디지털금융개발부</td>
+                    <td>100685</td>
+                    <td>김성휘</td>
+                    <td>700</td>
+                    <td>480</td>
+                    <td>68.6%</td>
+                    <td>10</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>디지털금융개발부</td>
+                    <td>100685</td>
+                    <td>김성휘</td>
+                    <td>700</td>
+                    <td>480</td>
+                    <td>68.6%</td>
+                    <td>10</td>
+                    <td>1</td>
+                  </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="button-group">
+            <div class="button-group--position-left">
+              <button type="button" class="button button--outline-secondary">엑셀저장</button>
+            </div>
+          </div>
+        </section>
+
       </div>
     </main>
 
@@ -187,7 +441,77 @@
   </div>
 
 
+  <!-- 받은상품수 팝업 -->
+  <div class="layer" id="popupBeanStat">
+    <div class="layer-dim"></div>
+    <article class="layer-article" style="width: 800px;">
+      <header class="layer-header">
+        <h1 class="layer-header__title">명단</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup></colgroup>
+              <thead>
+                <tr>
+                  <th>상품전환 일련번호</th>
+                  <th>소속</th>
+                  <th>행번</th>
+                  <th>이름</th>
+                  <th>상품전환신청일</th>
+                  <th>상품 일련번호</th>
+                  <th>상품명</th>
+                  <th>황금콩 개수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>S100685_001</td>
+                  <td>디지털 금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                  <td>2021-10-01</td>
+                  <td>0001</td>
+                  <td>스타벅스 텀블러</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>S100685_001</td>
+                  <td>디지털 금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                  <td>2021-10-01</td>
+                  <td>0001</td>
+                  <td>스타벅스 텀블러</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>S100685_001</td>
+                  <td>디지털 금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                  <td>2021-10-01</td>
+                  <td>0001</td>
+                  <td>스타벅스 텀블러</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>닫기</button>
+          <button type="button" class="button button--flat-secondary">엑셀저장</button>
+        </div>
+      </footer>
+    </article>
+  </div>
+  <!-- // 상품전환수 팝업 -->
 
 
 
