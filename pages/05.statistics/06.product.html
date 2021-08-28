@@ -60,6 +60,11 @@
               <span class="doc-nav__text">관리자 정보관리</span>
             </a>
           </div>
+          <div class="doc-nav__2depth">
+            <a class="doc-nav__link" href="/pages/01.manage/03.group_menu.html">
+              <span class="doc-nav__text">그룹별 메뉴관리</span>
+            </a>
+          </div>
         </div>
 
         <div class="doc-nav__1depth  ">
@@ -254,7 +259,7 @@
                   <td>0001</td>
                   <td>스타벅스 텀블러</td>
                   <td>1</td>
-                  <td><button class="button button--type-link-sm" data-layer="#popupMemberStat">80</button></td>
+                  <td><button class="button button--type-link-sm" data-layer="#popupBeanStat">80</button></td>
                   <td><button class="button button--type-link-sm" data-layer="#popupMemberStat">60</button></td>
                   <td>80%</td>
                 </tr>
@@ -271,6 +276,134 @@
 
 
 
+  <!-- 상품전환수 팝업 -->
+  <div class="layer" id="popupBeanStat">
+    <div class="layer-dim"></div>
+    <article class="layer-article" style="width: 800px;">
+      <header class="layer-header">
+        <h1 class="layer-header__title">명단</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup></colgroup>
+              <thead>
+                <tr>
+                  <th>상품전환 일련번호</th>
+                  <th>소속</th>
+                  <th>행번</th>
+                  <th>이름</th>
+                  <th>상품전환신청일</th>
+                  <th>상품 일련번호</th>
+                  <th>상품명</th>
+                  <th>황금콩 개수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>S100685_001</td>
+                  <td>디지털 금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                  <td>2021-10-01</td>
+                  <td>0001</td>
+                  <td>스타벅스 텀블러</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>S100685_001</td>
+                  <td>디지털 금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                  <td>2021-10-01</td>
+                  <td>0001</td>
+                  <td>스타벅스 텀블러</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>S100685_001</td>
+                  <td>디지털 금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                  <td>2021-10-01</td>
+                  <td>0001</td>
+                  <td>스타벅스 텀블러</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>닫기</button>
+          <!-- <button type="button" class="button button--flat-secondary">엑셀저장</button> -->
+        </div>
+      </footer>
+    </article>
+  </div>
+  <!-- // 상품전환수 팝업 -->
+
+
+  <!-- 회원수 통계 팝업 -->
+  <div class="layer" id="popupMemberStat">
+    <div class="layer-dim"></div>
+    <article class="layer-article" style="width: 400px;">
+      <header class="layer-header">
+        <h1 class="layer-header__title">명단</h1>
+      </header>
+      <div class="layer-body">
+        <div class="layer-contents">
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup>
+                <col />
+                <col width="96px" />
+                <col width="96px"/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>소속</th>
+                  <th>행번</th>
+                  <th>이름</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>디지털 금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                </tr>
+                <tr>
+                  <td>디지털 금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                </tr>
+                <tr>
+                  <td>디지털 금융개발부</td>
+                  <td>100685</td>
+                  <td>김성휘</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+      <footer class="layer-footer">
+        <div class="button-group">
+          <button type="button" class="button button--flat-warning" data-layerBtnClose>닫기</button>
+          <!-- <button type="button" class="button button--flat-secondary">엑셀저장</button> -->
+        </div>
+      </footer>
+    </article>
+  </div>
+  <!-- // 회원수 통계 팝업 -->
 
 
   <!-- <script src="/assets/libs/bootstrap@5.1.0/js/bootstrap.bundle.min.js"></script>
