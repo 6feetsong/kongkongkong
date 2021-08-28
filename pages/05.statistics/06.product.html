@@ -179,6 +179,88 @@
 
         <section class="page-section">
           <h3 class="page-section__title">조회조건</h3>
+
+          <div class="filter-wrap">
+            <div class="filter-row">
+              <div class="filter-cell__title">
+                조회기간
+                <span class="form-checkbox"></span>(전체: <input id="checkboxNormal" type="checkbox">)</span>
+              </div>
+              <div class="filter-cell__contents">
+                <div class="form-group">
+                  <span class="form-label">시작일:&nbsp;</span>
+                  <span class="form-datepicker">
+                    <input type="text" class="datepicker">
+                  </span>
+                  <span class="form-label">&nbsp;~ 종료일:&nbsp;</span>
+                  <span class="form-datepicker">
+                    <input type="text" class="datepicker">
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-row">
+              <div class="filter-cell__title">
+                상품별 검색
+                <span class="form-checkbox"></span>(전체: <input id="checkboxNormal" type="checkbox">)</span>
+              </div>
+              <div class="filter-cell__contents">
+                <div class="flex-container">
+                  <span class="flex-container-fill" style="line-height: 30px;">은행장, 임원, 부장, 지점장, 과장, 심사역…</span>
+                  <button class="button-icon button-icon--search" type="button" data-layer="#popupRole"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="button-group">
+            <div class="button-group--position-right">
+              <button type="button" class="button button--outline-primary">조회</button>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="page-section">
+          <h3 class="page-section__title">결과</h3>
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup></colgroup>
+              <thead>
+                <tr>
+                  <th>일련번호</th>
+                  <th>품명</th>
+                  <th>필요황금콩수</th>
+                  <th>전환신청수량</th>
+                  <th>전환신청직원수</th>
+                  <th>선호비중</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>   
+                  <td>합계</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>100</td>
+                  <td>78</td>
+                  <td>100%</td>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td>0001</td>
+                  <td>스타벅스 텀블러</td>
+                  <td>1</td>
+                  <td><button class="button button--type-link-sm" data-layer="#popupMemberStat">80</button></td>
+                  <td><button class="button button--type-link-sm" data-layer="#popupMemberStat">60</button></td>
+                  <td>80%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
       </div>
     </main>

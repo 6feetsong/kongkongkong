@@ -176,6 +176,238 @@
 
         <section class="page-section">
           <h3 class="page-section__title">조회조건</h3>
+
+          <div class="filter-wrap">
+            <div class="filter-row">
+              <div class="filter-cell__title">구분</div>
+              <div class="filter-cell__contents">
+                <span class="form-select">
+                  <select>
+                    <option value="1" selected>일자별</option>
+                    <option value="2">분기별</option>
+                    <option value="3">월별</option>
+                    <option value="4">년도별</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div class="filter-row">
+              <div class="filter-cell__title">
+                조회기간
+                <span class="form-checkbox"></span>(전체: <input id="checkboxNormal" type="checkbox">)</span>
+              </div>
+              <div class="filter-cell__contents">
+                <!-- 일자별 -->
+                <div class="form-group">
+                  <span class="form-label">시작일:&nbsp;</span>
+                  <span class="form-datepicker">
+                    <input type="text" class="datepicker">
+                  </span>
+                  <span class="form-label">&nbsp;~ 종료일:&nbsp;</span>
+                  <span class="form-datepicker">
+                    <input type="text" class="datepicker">
+                  </span>
+                </div>
+                <!-- // 일자별 -->
+
+                <!-- 분기별 -->
+                <div class="form-group">
+                  <span class="form-select form-select-sm">
+                    <select>
+                      <option value="" selected>년도</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select>
+                  </span>
+                  <span class="form-select form-select-sm">
+                    <select>
+                      <option value="" selected>분기</option>
+                      <option value="1">1/4분기</option>
+                      <option value="2">2/4분기</option>
+                      <option value="3">3/4분기</option>
+                      <option value="4">4/4분기</option>
+                    </select>
+                  </span>
+                  <span class="form-label">&nbsp;~&nbsp;</span>
+                  <span class="form-select form-select-sm">
+                    <select>
+                      <option value="" selected>년도</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select>
+                  </span>
+                  <span class="form-select form-select-sm">
+                    <select>
+                      <option value="" selected>분기</option>
+                      <option value="1">1/4분기</option>
+                      <option value="2">2/4분기</option>
+                      <option value="3">3/4분기</option>
+                      <option value="4">4/4분기</option>
+                    </select>
+                  </span>
+                </div>
+                <!-- // 분기별 -->
+
+                <!-- 월별 -->
+                <div class="form-group">
+                  <span class="form-select form-select-sm">
+                    <select>
+                      <option value="" selected>년도</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select>
+                  </span>
+                  <span class="form-select form-select-sm">
+                    <select>
+                      <option value="" selected>월</option>
+                      <option value="1">1월</option>
+                      <option value="2">2월</option>
+                      <option value="3">3월</option>
+                      <option value="4">4월</option>
+                      <option value="5">5월</option>
+                      <option value="6">6월</option>
+                      <option value="7">7월</option>
+                      <option value="8">8월</option>
+                      <option value="9">9월</option>
+                      <option value="10">10월</option>
+                      <option value="11">11월</option>
+                      <option value="12">12월</option>
+                    </select>
+                  </span>
+                  <span class="form-label">&nbsp;~&nbsp;</span>
+                  <span class="form-select form-select-sm">
+                    <select>
+                      <option value="" selected>년도</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select>
+                  </span>
+                  <span class="form-select form-select-sm">
+                    <select>
+                      <option value="" selected>월</option>
+                      <option value="1">1월</option>
+                      <option value="2">2월</option>
+                      <option value="3">3월</option>
+                      <option value="4">4월</option>
+                      <option value="5">5월</option>
+                      <option value="6">6월</option>
+                      <option value="7">7월</option>
+                      <option value="8">8월</option>
+                      <option value="9">9월</option>
+                      <option value="10">10월</option>
+                      <option value="11">11월</option>
+                      <option value="12">12월</option>
+                    </select>
+                  </span>
+                </div>
+                <!-- // 월별 -->
+
+                <!-- 년도별 -->
+                <div class="form-group">
+                  <span class="form-select form-select-sm">
+                    <select>
+                      <option value="" selected>년도</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select>
+                  </span>
+                  <span class="form-label">&nbsp;~&nbsp;</span>
+                  <span class="form-select form-select-sm">
+                    <select>
+                      <option value="" selected>년도</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select>
+                  </span>
+                </div>
+                <!-- // 년도별 -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-section">
+          <h3 class="page-section__title">합계</h3>
+
+          <div class="table">
+            <table>
+              <caption></caption>
+              <colgroup></colgroup>
+              <thead>
+                <tr>
+                  <th>일자/기간</th>
+                  <th>방문수</th>
+                  <th>방문자수</th>
+                  <th>부여 알콩 수</th>
+                  <th>사용 알콩 수 (달콩합계)</th>
+                  <th>알콩 사용률</th>
+                  <th>알콩 준 횟수</th>
+                  <th>1회평균 알콩 주는 수</th>
+                  <th>달콩 중 답장편지 수</th>
+                  <th>답장회신율</th>
+                  <th>황금콩 수</th>
+                  <th>상품전환 횟수</th>
+                  <th>황금콩 소진수</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <td>합계</td>
+                  <td>3525</td>
+                  <td>123</td>
+                  <td>11</td>
+                  <td>45</td>
+                  <td>28%</td>
+                  <td>18</td>
+                  <td>4.5</td>
+                  <td>12</td>
+                  <td>25%</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                </tr>                
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td>2020-10-01</td>
+                  <td>3525</td>
+                  <td>123</td>
+                  <td>11</td>
+                  <td>45</td>
+                  <td>28%</td>
+                  <td>18</td>
+                  <td>4.5</td>
+                  <td>12</td>
+                  <td>25%</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>2020-10-01</td>
+                  <td>3525</td>
+                  <td>123</td>
+                  <td>11</td>
+                  <td>45</td>
+                  <td>28%</td>
+                  <td>18</td>
+                  <td>4.5</td>
+                  <td>12</td>
+                  <td>25%</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="button-group">
+            <div class="button-group--position-left">
+              <button type="button" class="button button--outline-secondary">엑셀저장</button>
+            </div>
+          </div>
+
         </section>
       </div>
     </main>

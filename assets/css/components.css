@@ -90,6 +90,9 @@
 .form-group > .form-number--sm {
   width: 84px;
 }
+.form-group > .form-select-sm {
+  width: 120px;
+}
 
 /* datepicker */
 .form-datepicker {
@@ -169,6 +172,15 @@
   min-width: 54px;
 }
 .button--type-link {
+  text-decoration: underline;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #0d6efd;
+}
+.button--type-link-sm {
+  padding: 0;
+  min-width: 0;
+  font-size: 12px;
   text-decoration: underline;
   background-color: transparent;
   border: 1px solid transparent;
@@ -520,6 +532,11 @@
 .table th {
   font-weight: 700;
   background-color: #f8f8f8;
+  vertical-align: middle;
+}
+.table tfoot td {
+  font-weight: 700;
+  background-color: #efefef;
   vertical-align: middle;
 }
 .table td {
