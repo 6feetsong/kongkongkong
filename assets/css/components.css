@@ -216,7 +216,7 @@
 .button--flat-warning {
   background-color: #ffc107;
   border-color: #ffc107;
-  color: #333333;
+  color: #ffffff;
 }
 .button--flat-warning:hover {
   background-color: #ffca2c;
@@ -270,7 +270,7 @@
 .button--outline-warning:hover {
   background-color: #ffc107;
   border-color: #ffc107;
-  color: #333333;
+  color: #ffffff;
 }
 .button--outline-danger {
   background-color: transparent;
@@ -395,7 +395,6 @@
   font-size: 14px;
   line-height: 1;
 }
-
 
 /* button group */
 .button-group {
@@ -969,6 +968,43 @@
   padding: 20px;
 }
 
+.layer-alert {
+  position: relative;
+  display: inline-block;
+  min-width: 320px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+.layer-alert__inner {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.layer-alert__btns {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.layer-confirm {
+  position: relative;
+  display: inline-block;
+  min-width: 320px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+.layer-confirm__inner {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.layer-confirm__btns {
+  margin-top: 20px;
+  text-align: center;
+}
+.layer-confirm__btns > button {
+  margin: 0 10px;
+}
+
 /* page-title */
 .page-article {
 }
@@ -1001,8 +1037,6 @@ dl.table-cell > dt {
 dl.table-cell > dd {
   display: inline-block;
 }
-
-
 
 .flex-container {
   display: flex;

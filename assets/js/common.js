@@ -1,6 +1,8 @@
 //
 // Scripts
 //
+if (typeof Promise !== "function")
+        document.write('<script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.min.js"><\/script>');
 
 ( function($){
 
@@ -20,6 +22,64 @@
   }
 })(jQuery);
   
+
+(function ($) {
+  var uiPopup = {
+    options :{
+      btnTextConfirm : '확인',
+      btnTextCancel : '취소',
+      text:'',
+      isCallBackClose:true
+    },
+    alertTemplate : function(options){
+      var alertButton = '<div class="layer-alert__btns"><button class="button button--flat-warning" name="alert-close" type="button">'+options.btnTextConfirm+'</button></div>';
+      var $alert = $('<div class="layer"><div class="layer-dim"></div><article class="layer-alert"><div class="layer-alert__inner">'+options.text+'</div>'+alertButton+'</article></div>')
+      return $alert
+    },
+    confirmTemplate : function(options){
+      var confirmButton = '<div class="layer-confirm__btns"><button class="button button button--flat-secondary layer__btn-close" name="confirm-close" type="button">'+options.btnTextCancel+'</button><button class="button button--flat-warning layer__btn-confirm" name="confirm-confirm" type="button">'+options.btnTextConfirm+'</button></div>';
+      var $confirm = $('<div class="layer"><div class="layer-dim"></div><article class="layer-confirm"><div class="layer-confirm__inner">'+options.text+'</div>'+confirmButton+'</article></div>');
+      return $confirm
+    },
+    alert : function(addOption){
+      var _this = this;
+      var mergeOption = $.extend({},_this.options,addOption)
+      var $body = $('body');
+      var alertTemplate = this.alertTemplate(mergeOption)
+      
+      alertTemplate.appendTo($body).addClass('layer--is-open');
+      $(document).on('click', '[name=alert-close]', function(){
+        _this.close(alertTemplate)
+      })
+    },
+    confirm : function(addOption){
+      var _this = this;
+      mergeOption = $.extend({},_this.options,addOption)
+      var $body = $('body');
+      var confirmTemplate = this.confirmTemplate(mergeOption)
+      console.log(mergeOption)
+      
+      confirmTemplate.appendTo( $body).addClass('layer--is-open');
+      $(document).on('click', '[name=confirm-close]', function(){
+        _this.close(confirmTemplate);
+      });
+      $(document).on('click', '[name=confirm-confirm]', function(){
+        addOption.confirmCallBack();
+        if(mergeOption.isCallBackClose){
+          _this.close(confirmTemplate)
+        }
+      })
+    },
+    close : function(target){
+      $(target).remove()
+    },
+  }
+
+  $.uiPopup = uiPopup
+
+
+})(jQuery);
+
 
 (function ($) {
 
@@ -57,6 +117,9 @@
     $('[data-layerBtnClose]').layerClose();
   }
 
+ 
+
+
   
 
   
@@ -68,6 +131,7 @@
     initDocNavToggle();
     initFlatpickr();
     initLayer();
+
    // datepicker()
 
 
