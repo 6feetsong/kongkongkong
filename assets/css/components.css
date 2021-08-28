@@ -87,6 +87,9 @@
 .form-group > .form-input + .button {
   margin-left: 10px;
 }
+.form-group > .form-number--sm {
+  width: 84px;
+}
 
 /* datepicker */
 .form-datepicker {
@@ -392,6 +395,15 @@
 }
 .button-group .button {
   margin: 0 4px;
+}
+.button-group .button:first-child {
+  margin: 0 4px 0 0;
+}
+.button-group .button:last-child {
+  margin: 0 0 0 4px;
+}
+.button-group .button:only-child {
+  margin: 0;
 }
 .button-group--position-left,
 .button-group--position-center,
