@@ -876,6 +876,39 @@
   color: #bbb;
 }
 
+
+/* 메뉴권한관리 용 트리 추가 class */
+.organization-tree__label.organization-tree__node {
+  padding-left: 18px;
+}
+.organization-tree__label {
+  flex: 1 1 auto;
+}
+.organization-tree__check {
+  width: 100px;
+  text-align: center;
+  margin: 0;
+}
+
+.organization-box-header {
+  display: flex;
+  width: 560px;
+  background-color: #f8f8f8;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  border-bottom: none;
+}
+.organization-box-header > .organization-box-header-fill {
+  flex: 1 1 auto;
+  padding: 10px 15px;
+}
+.organization-box-header > .organization-box-header-cell {
+  width: 100px;
+  text-align: center;
+  border-left: 1px solid #dddddd;
+}
+
+
 /* layer */
 .layer {
   display: none;

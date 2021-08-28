@@ -184,70 +184,148 @@
 
           <h2 class="page-title">그룹별 메뉴관리</h2>
 
+          <p>
+            그룹별 메뉴 관리는 구너한그룹에서 보여지게 되는 메뉴를 관리합니다.<br/>
+            메뉴구너한여부 체크항목에 따라 권한그룹으로 접속하는 관리자의 메뉴가 변경됩니다.<br/>
+            조회만 가능 항목을 체크시 메뉴에서 제공되는 등록, 수정, 삭제 버튼이 사라지게 됩니다.
+          </p>
+
           <section class="page-section">
-            <h3 class="page-section__title">콩 내역</h3>
+            <h3 class="page-section__title">조회조건</h3>
+  
+            <div class="filter-wrap">
+              <div class="filter-row">
+                <div class="filter-cell__title">권한그룹명</div>
+                <div class="filter-cell__contents">
+                  <span class="form-select">
+                    <select>
+                      <option value="1" selected>ADMIN</option>
+                      <option value="2">Developer</option>
+                      <option value="3">Guest</option>
+                    </select>
+                  </span>
+                </div>
+              </div>
+            </div>
 
-            <div class="table">
-              <table>
-                <caption></caption>
-                <colgroup>
-                  <col style="width:60px;">
-                  <col>
-                  <col>
-                  <col style="width:100px;">
-                  <col style="width:100px;">
-                  <col style="width:100px;">
-                  <col style="width:100px;">
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th scope="col">선택</th>
-                    <th scope="col">행번</th>
-                    <th scope="col">이름</th>
-                    <th scope="col">사용자관리</th>
-                    <th scope="col">관리자관리</th>
-                    <th scope="col">콩 관리</th>
-                    <th scope="col">삭제</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <span class="form-checkbox">
-                        <input id="" type="checkbox" name="">
-                      </span>
-                    </td>
-                    <td>1006852101001</td>
-                    <td>홍길동</td>
-                    <td>
-                      <div class="form-select">
-                        <select>
-                          <option value="Y">Y</option>
-                          <option value="N">N</option>
-                        </select>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-select">
-                        <select>
-                          <option value="Y">Y</option>
-                          <option value="N">N</option>
-                        </select>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="form-select">
-                        <select>
-                          <option value="Y">Y</option>
-                          <option value="N">N</option>
-                        </select>
-                      </div>
-                    </td>
-                    <td><button class="button-delete" type="button">삭제</button></td>
-                  </tr>
+            <div class="button-group">
+              <div class="button-group--position-right">
+                <button type="button" class="button button--outline-primary">조회</button>
+              </div>
+            </div>
+          </section>
 
-                </tbody>
-              </table>
+          <section class="page-section">
+            <h3 class="page-section__title">메뉴 목록</h3>
+
+            
+
+            <div class="organization-box-header">
+              <span class="organization-box-header-fill">내용</span>
+              <span class="organization-box-header-cell">메뉴권한여부</span>
+              <span class="organization-box-header-cell">조회만 가능</span>
+            </div>
+            <div class="organization">
+              <div class="organization-box">
+                <!-- 조직도 트리 -->
+                <div class="organization-tree">
+                  <ul class="organization-tree__list">
+                    <li class="organization-tree__group">
+                      <div class="organization-tree__item organization-tree__item--is-open">
+                        <button type="button" class="organization-tree__button">열기 / 접기</button>
+                        <span class="organization-tree__title organization-tree__label">전자명함관리자</span>
+                        <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                        <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                      </div>
+                      <ul class="organization-tree__list-sub">
+                        <li>
+                          <div class="organization-tree__item organization-tree__item--is-open">
+                            <button type="button" class="organization-tree__button">열기 / 접기</button>
+                            <span class="organization-tree__line"></span>
+                            <a href="#none" class="organization-tree__title organization-tree__label">전자명함관리자</a>
+                            <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                            <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                          </div>
+                          <ul class="organization-tree__list-sub">
+                            <li>
+                              <div class="organization-tree__item">
+                                <button type="button" class="organization-tree__button">열기 / 접기</button>
+                                <span class="organization-tree__line"></span>
+                                <a href="#none" class="organization-tree__title organization-tree__label">명함설정</a>
+                                <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                              </div>
+                              <ul class="organization-tree__list-sub">
+                                <li>
+                                  <div class="organization-tree__item">
+                                    <span class="organization-tree__line"></span>
+                                    <a href="#none" class="organization-tree__title organization-tree__label organization-tree__node">사용자정보 관리</a>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="organization-tree__item">
+                                    <span class="organization-tree__line"></span>
+                                    <a href="#none" class="organization-tree__title organization-tree__label organization-tree__node">내서랍 관리</a>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="organization-tree__item">
+                                <button type="button" class="organization-tree__button">열기 / 접기</button>
+                                <span class="organization-tree__line"></span>
+                                <a href="#none" class="organization-tree__title organization-tree__label">명함설정 관리</a>
+                                <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                              </div>
+                              <ul class="organization-tree__list-sub">
+                                <li>
+                                  <div class="organization-tree__item">
+                                    <span class="organization-tree__line"></span>
+                                    <a href="#none" class="organization-tree__title organization-tree__label organization-tree__node">설정</a>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="organization-tree__item">
+                                    <span class="organization-tree__line"></span>
+                                    <a href="#none" class="organization-tree__title organization-tree__label organization-tree__node">전용상품 관리</a>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="organization-tree__item">
+                                    <span class="organization-tree__line"></span>
+                                    <a href="#none" class="organization-tree__title organization-tree__label organization-tree__node">전자명함 등록명세</a>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="organization-tree__item">
+                                    <span class="organization-tree__line"></span>
+                                    <a href="#none" class="organization-tree__title organization-tree__label organization-tree__node">전자명함 등록명세 이력</a>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                    <span class="organization-tree__append organization-tree__check"><input type="checkbox" /></span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 조직도 트리 -->
+
+              </div>
             </div>
 
 
@@ -288,7 +366,51 @@
 
 
 
+  <script>
+    var orgToggle = function(){
+      var $btn = $('.organization-tree__button')
+      $btn.on('click', function(){
+        var _this = $(this)
+        _this.closest('.organization-tree__item').toggleClass('organization-tree__item--is-open')
+      })
+    }     
+    orgToggle();
+    
+    var appendOrgItem = function(){
+      var $orgCheckbox = $('.organization-tree__append > input[type="checkbox"]');
+     
+      $orgCheckbox.on('input', function(e){
+        var _this = $(this);
+            $wrapLi = _this.closest('li');                    
+        if(e.target.checked){
+          $wrapLi.addClass('organization-tree__item--is-append')
+        }else{
+          $wrapLi.removeClass('organization-tree__item--is-append')
+        }
+      })
+    }
+    appendOrgItem()
 
+    /*
+    const btn = document.querySelectorAll('.organization-tree__button')
+    for (let i = 0; i < btn.length; i++){
+      btn[i].addEventListener('click', (e)=>{
+        btn[i].parentElement.classList.toggle('organization-tree__item--is-open')
+      },false)
+    };
+    const checkBox = document.querySelectorAll('.organization-tree__append > input[type="checkbox"]')
+    for (let i = 0; i<checkBox.length;i++){
+      checkBox[i].addEventListener('input',(e)=>{
+        const elLi = e.target.closest('li');
+        if(e.target.checked){
+          elLi.classList.add('organization-tree__item--is-append')
+        }else{
+          elLi.classList.remove('organization-tree__item--is-append')
+        }
+      },false)
+    }
+    */
+  </script>
 
 
   <!-- <script src="/assets/libs/bootstrap@5.1.0/js/bootstrap.bundle.min.js"></script>
