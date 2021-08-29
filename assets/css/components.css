@@ -875,7 +875,6 @@
   color: #bbb;
 }
 
-
 /* 메뉴권한관리 용 트리 추가 class */
 .organization-tree__label.organization-tree__node {
   padding-left: 18px;
@@ -908,7 +907,6 @@
   border-left: 1px solid #dddddd;
   box-sizing: border-box;
 }
-
 
 /* layer */
 .layer {

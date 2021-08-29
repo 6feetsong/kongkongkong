@@ -1,0 +1,19 @@
+.layer-organization {
+}
+
+.organization-wrap {
+  display: flex;
+  padding-top: 15px;
+}
+.organization-btns {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.organization-setting {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e5e5e5;
+}
