@@ -43,35 +43,33 @@ if (typeof Promise !== "function")
     },
     alert : function(addOption){
       var _this = this;
-      var mergeOption = $.extend({},_this.options,addOption)
+      var mergeOption = $.extend({},_this.options,addOption);
       var $body = $('body');
-      var alertTemplate = this.alertTemplate(mergeOption)
-      
+      var alertTemplate = this.alertTemplate(mergeOption);
       alertTemplate.appendTo($body).addClass('layer--is-open');
-      $(document).on('click', '[name=alert-close]', function(){
-        _this.close(alertTemplate)
-      })
+      alertTemplate.on('click', '[name=alert-close]', function(){
+        _this.close(alertTemplate);
+        mergeOption.alertCallBack && mergeOption.alertCallBack();
+      });
     },
     confirm : function(addOption){
       var _this = this;
-      mergeOption = $.extend({},_this.options,addOption)
+      var mergeOption = $.extend({},_this.options,addOption)
       var $body = $('body');
-      var confirmTemplate = this.confirmTemplate(mergeOption)
-      console.log(mergeOption)
-      
+      var confirmTemplate = this.confirmTemplate(mergeOption);
       confirmTemplate.appendTo( $body).addClass('layer--is-open');
-      $(document).on('click', '[name=confirm-close]', function(){
+      confirmTemplate.on('click', '[name=confirm-close]', function(){
         _this.close(confirmTemplate);
       });
-      $(document).on('click', '[name=confirm-confirm]', function(){
+      confirmTemplate.on('click', '[name=confirm-confirm]', function(){
         addOption.confirmCallBack();
         if(mergeOption.isCallBackClose){
-          _this.close(confirmTemplate)
+          _this.close(confirmTemplate);
         }
       })
     },
     close : function(target){
-      $(target).remove()
+      target.remove();
     },
   }
 

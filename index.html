@@ -1117,18 +1117,21 @@ $(".datepicker").flatpickr(defaultOption);</code>
               $('.alertTest').on('click', function(){
                 $.uiPopup.alert({
                   text : '얼럿문구넣자',
-                })
-              })
-              $('.confirmTest').on('click', function(){
+                  alertCallBack: function() {
+                    console.log('alert confirmed.');
+                  }
+                });
+              });
+              $('.confirmTest').on('click', function() {
                 $.uiPopup.confirm({
-                  text : '컴펌이야',    
-                  confirmCallBack : function(){
-                    console.log('콜백')
-                  },
-                })
-              })
-            })
-            
+                  text : '컨펌이야',    
+                  confirmCallBack: function() {
+                    console.log('confirm callback called');
+                  }
+                });
+              });
+
+            });
           </script>
 
 
