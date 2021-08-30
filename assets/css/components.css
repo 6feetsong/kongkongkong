@@ -1041,6 +1041,7 @@ dl.table-cell > dd {
 .flex-container {
   display: flex;
   width: 100%;
+  align-items: center;
 }
 .flex-container > .flex-container-fill {
   flex: 1 1 auto;
