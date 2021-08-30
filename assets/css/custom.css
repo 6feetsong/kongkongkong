@@ -5,6 +5,9 @@
   display: flex;
   padding-top: 15px;
 }
+.organization-wrap:first-child{
+  padding-top:0;
+}
 .organization-btns {
   padding: 8px;
   display: flex;
@@ -12,8 +15,11 @@
   justify-content: center;
 }
 .organization-setting {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  padding: 8px;
-  border: 1px solid #e5e5e5;
+}
+.organization-setting .organization-employee{
+  border:1px solid #f0f0f0
 }

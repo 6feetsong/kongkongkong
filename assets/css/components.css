@@ -608,9 +608,13 @@
 /* ---- 조직도 - start ---- */
 
 /* 조직도 팝업 */
+.organization-wrap{
+  height:540px;
+}
 .organization {
   display: flex;
-  height: 720px;
+  flex-direction: column;
+  
 }
 
 .organization-box {
@@ -830,6 +834,7 @@
   border-left: 1px solid #f0f0f0;
   flex-direction: column;
   flex: 1;
+  overflow-y:auto;
 }
 
 .organization-employee__empty {
