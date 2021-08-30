@@ -468,23 +468,223 @@
   <!-- 직위설정 -->
   <div class="layer" id="popupRole">
     <div class="layer-dim"></div>
-    <article class="layer-article" style="width: 800px;">
+    <article class="layer-article" style="width: 740px;">
       <header class="layer-header">
         <h1 class="layer-header__title">직위 변경</h1>
       </header>
       <div class="layer-body">
         <div class="layer-contents">
-          <div class="organization" style="height: 540px;">
-            <div class="organization-box">
-              <!-- 조직도 트리 -->
-              <div class="organization-tree">
-                조직도 트리
+          <div class="organization-wrap">
+            <div class="organization">
+              <h2>전체목록</h2>
+              <div class="organization-box" style="width:300px">
+                <!-- 조직도 트리 -->
+                <div class="organization-employee">
+                  <ul class="organization-employee__list">
+                    <li class="organization-employee__group">
+                      <div class="organization-employee__item">
+                        <div class="organization-employee__title">
+                          <input type="checkbox">
+                          <label>전체1</label>
+                        </div>
+                      </div>
+                      <ul class="organization-employee__list-sub">
+                        <li>
+                          <div class="organization-employee__item">
+                            <div class="organization-employee__title">
+                              <input type="checkbox">
+                              <label>
+                                <strong class="organization-employee__name">은행장</strong>
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="organization-employee__item">
+                            <div class="organization-employee__title">
+                              <input type="checkbox">
+                              <label>
+                                <strong class="organization-employee__name">그룹장</strong>
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="organization-employee__item">
+                            <div class="organization-employee__title">
+                              <input type="checkbox">
+                              <label>
+                                <strong class="organization-employee__name">본부장</strong>
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+            
+            
+                    <li class="organization-employee__group">
+                      <div class="organization-employee__item">
+                        <div class="organization-employee__title">
+                          <input type="checkbox">
+                          <label>전체2</label>
+                        </div>
+                      </div>
+                      <ul class="organization-employee__list-sub">
+                        <li>
+                          <div class="organization-employee__item">
+                            <div class="organization-employee__title">
+                              <input type="checkbox">
+                              <label>
+                                <strong class="organization-employee__name">은행장</strong>
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="organization-employee__item">
+                            <div class="organization-employee__title">
+                              <input type="checkbox">
+                              <label>
+                                <strong class="organization-employee__name">그룹장</strong>
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="organization-employee__item">
+                            <div class="organization-employee__title">
+                              <input type="checkbox">
+                              <label>
+                                <strong class="organization-employee__name">본부장</strong>
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+  
+                
+            
+            
+                  <!--값없을떄 -->
+                  <!--<div class="organization-employee__empty">
+                    선택하신 목록이 없습니다.
+                  </div> -->
+                  <!-- //값없을떄 -->
+            
+                </div>
+                <!-- // 조직도 트리 -->
               </div>
-              <!-- // 조직도 트리 -->
+            </div>
+            <div class="organization-btns">
+              <button type="button" class="button button--flat-secondary">추가</button>
+              <br />
+              <br />
+              <br />
+              <br />
+              <button type="button" class="button button--flat-secondary">제외</button>
+            </div>
 
-              <!-- 조직원 목록 -->
-              <div class="organization-employee">
-                조직원 목록
+            <div class="organization-setting">
+              <h2>선택목록</h2>
+               <!-- 조직원 목록 -->
+               <div class="organization-employee">
+                <ul class="organization-employee__list">
+                  <li class="organization-employee__group">
+                    <div class="organization-employee__item">
+                      <div class="organization-employee__title">
+                        <input type="checkbox">
+                        <label>전체1</label>
+                      </div>
+                    </div>
+                    <ul class="organization-employee__list-sub">
+                      <li>
+                        <div class="organization-employee__item">
+                          <div class="organization-employee__title">
+                            <input type="checkbox">
+                            <label>
+                              <strong class="organization-employee__name">은행장</strong>
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="organization-employee__item">
+                          <div class="organization-employee__title">
+                            <input type="checkbox">
+                            <label>
+                              <strong class="organization-employee__name">그룹장</strong>
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="organization-employee__item">
+                          <div class="organization-employee__title">
+                            <input type="checkbox">
+                            <label>
+                              <strong class="organization-employee__name">본부장</strong>
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+          
+          
+                  <li class="organization-employee__group">
+                    <div class="organization-employee__item">
+                      <div class="organization-employee__title">
+                        <input type="checkbox">
+                        <label>전체2</label>
+                      </div>
+                    </div>
+                    <ul class="organization-employee__list-sub">
+                      <li>
+                        <div class="organization-employee__item">
+                          <div class="organization-employee__title">
+                            <input type="checkbox">
+                            <label>
+                              <strong class="organization-employee__name">은행장</strong>
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="organization-employee__item">
+                          <div class="organization-employee__title">
+                            <input type="checkbox">
+                            <label>
+                              <strong class="organization-employee__name">그룹장</strong>
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="organization-employee__item">
+                          <div class="organization-employee__title">
+                            <input type="checkbox">
+                            <label>
+                              <strong class="organization-employee__name">본부장</strong>
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+              
+          
+          
+                <!--값없을떄 -->
+                <!--<div class="organization-employee__empty">
+                  선택하신 목록이 없습니다.
+                </div> -->
+                <!-- //값없을떄 -->
+          
               </div>
               <!-- //조직원 목록 -->
             </div>
@@ -498,6 +698,34 @@
         </div>
       </footer>
     </article>
+
+    <script>
+      var orgToggle = function(){
+        var $btn = $('.organization-tree__button')
+        $btn.on('click', function(){
+          var _this = $(this)
+          _this.closest('.organization-tree__item').toggleClass('organization-tree__item--is-open')
+        })
+      }     
+      orgToggle();
+      
+      var appendOrgItem = function(){
+        var $orgCheckbox = $('.organization-tree__append > input[type="checkbox"]');
+       
+        $orgCheckbox.on('input', function(e){
+          var _this = $(this);
+              $wrapLi = _this.closest('li');                    
+          if(e.target.checked){
+            $wrapLi.addClass('organization-tree__item--is-append')
+          }else{
+            $wrapLi.removeClass('organization-tree__item--is-append')
+          }
+        })
+      }
+      appendOrgItem()
+
+
+    </script>
   </div>
   <!-- // 직위설정 -->
 

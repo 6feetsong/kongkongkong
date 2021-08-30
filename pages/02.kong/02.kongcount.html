@@ -379,7 +379,7 @@
    <!-- 조직도 추가  -->
    <div class="layer layer-organization" id="layerOrganization">
     <div class="layer-dim"></div>
-    <article class="layer-article" style="width: 960px;">
+    <article class="layer-article" style="width: 1024px;">
       
       <div class="layer-body">
         <div class="layer-contents">
@@ -424,7 +424,9 @@
 
 
           <div class="organization-wrap">
+           
             <div class="organization">
+              <h2>전체목록</h2>
               <div class="organization-box">
                 <!-- 조직도 트리 -->
                 <div class="organization-tree">
@@ -744,7 +746,6 @@
 
             <div class="organization-setting">
               <h2>선택목록</h2>
-
                <!-- 조직원 목록 -->
                <div class="organization-employee">
                 <ul class="organization-employee__list">
@@ -867,6 +868,36 @@
         </div>
       </footer>
     </article>
+
+    <script>
+      var orgToggle = function(){
+        var $btn = $('.organization-tree__button')
+        $btn.on('click', function(){
+          var _this = $(this)
+          _this.closest('.organization-tree__item').toggleClass('organization-tree__item--is-open')
+        })
+      }     
+      orgToggle();
+      
+      var appendOrgItem = function(){
+        var $orgCheckbox = $('.organization-tree__append > input[type="checkbox"]');
+       
+        $orgCheckbox.on('input', function(e){
+          var _this = $(this);
+              $wrapLi = _this.closest('li');                    
+          if(e.target.checked){
+            $wrapLi.addClass('organization-tree__item--is-append')
+          }else{
+            $wrapLi.removeClass('organization-tree__item--is-append')
+          }
+        })
+      }
+      appendOrgItem()
+  
+     
+    </script>
+  
+    
   </div>
   <!-- // 조직도 추가 -->
 
@@ -879,34 +910,6 @@
   <script src="/assets/js/common.js"></script>
 
 
-
-  <script>
-    var orgToggle = function(){
-      var $btn = $('.organization-tree__button')
-      $btn.on('click', function(){
-        var _this = $(this)
-        _this.closest('.organization-tree__item').toggleClass('organization-tree__item--is-open')
-      })
-    }     
-    orgToggle();
-    
-    var appendOrgItem = function(){
-      var $orgCheckbox = $('.organization-tree__append > input[type="checkbox"]');
-     
-      $orgCheckbox.on('input', function(e){
-        var _this = $(this);
-            $wrapLi = _this.closest('li');                    
-        if(e.target.checked){
-          $wrapLi.addClass('organization-tree__item--is-append')
-        }else{
-          $wrapLi.removeClass('organization-tree__item--is-append')
-        }
-      })
-    }
-    appendOrgItem()
-
-   
-  </script>
 
   <script>
     $(document).ready(function () {
